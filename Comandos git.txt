@@ -1,0 +1,46 @@
+git add  <Arquivo.extensão>
+
+Adicionar todos arquivos à Stage area :git add .       
+
+git commit -m "Mensagem"
+
+git status 
+
+Ver histórico de alterações: git log 
+
+Ver o que foi alterado:git diff               
+
+Limpar a tela: clear
+
+Interface Gráfica:gitk                     
+
+Editar um commit: git commit --amend -m "Mensagem aqui"         
+
+Tirar arquivo da Stage area: git reset HEAD <Arquivo>     
+
+Descartar mudanças no arquivo antes de incluí-lo na SA :git checkout --<Arquivo>   
+
+Remover arquivo do repositório: git rm <Arquivo>   
+
+
+--TAGS--
+
+Criar uma tag :  git tag -a v1.0 -m "Versão 1.0"
+
+Criar tag para um commit existente: git tag -a v1.0 <Chave do com> -m "Versão 1.0"
+
+Listar todas tags criadas: git tag
+
+Ver arquivos de uma tag: git checkout v1.0
+
+Deletar tag: git tag -d v1.0
+
+---BRANCHS (ramificações p/ testes) ---
+
+Criar branch: git branch teste
+
+Alternar p/ outro branch: git checkout teste
+
+Mesclar branch de teste ao master: git merge teste
+
+Deletar branch: git branch -d teste

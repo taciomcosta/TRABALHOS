@@ -1,7 +1,0 @@
-git add <Arquivo.extensão>
-git commit -m "Mensagem"
-git status 
-git log                 <- ver histórico de alterações
-git diff                 <- ver o que foi alterado
-clear
-gitk                        <- Interface Gráfica
