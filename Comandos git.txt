@@ -22,6 +22,8 @@ Descartar mudanças no arquivo antes de incluí-lo na SA :git checkout --<Arquivo>
 
 Remover arquivo do repositório: git rm <Arquivo>   
 
+Exibir Chave do commit + msg: git log --pretty=oneline
+
 
 --TAGS--
 
