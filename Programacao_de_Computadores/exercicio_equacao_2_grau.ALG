@@ -29,9 +29,9 @@ Inicio
 
      
 //SAÍDA
-
-       escreval (" x' é igual a:", x1)
-       escreval (" x'' é igual a:", x2)
+        escreval (" Delta é igual a:", delta)
+        escreval (" x' é igual a:", x1)
+        escreval (" x'' é igual a:", x2)
 Fimalgoritmo
 
 
