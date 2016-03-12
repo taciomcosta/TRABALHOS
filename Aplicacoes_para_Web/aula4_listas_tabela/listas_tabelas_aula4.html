@@ -1,0 +1,169 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+	</head>
+	
+	<body>
+		<h1> Listas </h1>
+		<hr />
+		
+		<h2> Listas ordenadas </h2>
+		<ol>
+			<li>Item</li>
+			<li>Item</li>
+		</ol>
+		<ol type="A"> <!-- letras maiúsculas-->
+			<li>Item</li>
+			<li>Item</li>
+		</ol>
+		<ol type="a"> <!-- letras minúsculas-->
+			<li>Item</li>
+			<li>Item</li>
+		</ol>
+		<ol type="I"> <!-- algarismos romanos maiúsculos-->
+			<li>Item</li>
+			<li>Item</li>
+		</ol>
+		<ol type="i"> <!-- algarismos romanos minúsculos-->
+			<li>Item</li>
+			<li>Item</li>
+		</ol>
+		<ol start="3"> <!-- lista começa no 3-->
+			<li>Item</li> 
+			<li>Item</li>
+			<li>Item</li>
+			<li>Item</li>
+			<li value="1">Item</li> <!-- valor forçado para ser 1-->
+			<li>Item</li>
+			<li>Item</li>
+			<li>Item</li>	
+		</ol>
+		<hr />
+		<h2>Listas não ordenadas</h2>
+		<ul type="square">
+			<li>Item</li>
+			<li>Item</li>
+		</ul>
+		<ul type="circle">
+			<li>Item</li>
+			<li><a href="#">Item</a></li>
+		</ul>
+
+		<ul type="disc">
+			<li>Item</li>
+			<li>Item</li>
+		</ul>
+				<hr />
+		<h2>Lista de definições</h2>
+		<dl> <!-- definition list-->
+			<dt>C,C++</dt> <!-- definition term-->
+			<dd> Linguagem de programação </dd> <!-- definition data-->
+			<dd> C foi criada por ...</dd>
+		</dl>
+		<hr />
+		<h2>Listas aninhadas - sublistas</h2>
+		<ul>
+			<li>Item 1</li>
+			<li>Item
+				<ul> <!-- sublista -->
+					<li>Item 2.1
+						<ul>
+							<li>Item 2.1.1.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<hr />
+		<h2>Listas com imagens </h2>
+		<ul>
+			<li><img src="facebook.png" /></li> <!-- acesse wwww.iconarchive.com -->
+			<li><img src="google.png" /></li>
+			<li><img src="twitter.png" /></li>
+			<li><img src="youtube.png" /></li>
+			<li><img src="pinterest.png"/></li>
+		</ul>
+		<hr />
+		<h1>Tabelas</h1>
+		<hr />
+		<table border="1" bgcolor="#0000FF">
+			<tr>
+				<th>Cabeçalho 1</th>
+				<th>Cabeçalho 2</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+				<td>3</td>
+				<td>4</td>
+			<tr>
+			</tr>
+		</table>
+		<hr />
+		<table border="2" bgcolor="#0000F1">
+			<tr>
+				<th>Cabeçalho 1</th>
+				<th>Cabeçalho 2</th>
+			</tr>
+			<tr>
+				<td colspan="2">1</td>
+				<!-- <td>2</td> está morto -->
+			</tr>
+				<td>3</td>
+				<td>4</td>
+			<tr>
+			</tr>
+		</table>
+		<hr />
+		
+		<table border="3" bgcolor="#008800">
+			<tr>
+				<th>Cabeçalho 1</th>
+				<th>Cabeçalho 2</th>
+			</tr>
+			<tr>
+				<td rowspan="2">1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<!-- <td>3</td> está morto -->
+				<td>4</td>
+			</tr>
+		</table>
+		<hr />
+		
+		<table border="1" bgcolor="#FFFFFF" cellspacing="10"> <!-- cellspacing: determina o espaço entre a célula e as outras bordas da tabela -->
+			<tr>
+				<th>Cabeçalho 1</th>
+				<th>Cabeçalho 2</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<hr />
+		<table border="1" bgcolor="#AA0000" cellpadding="10"> <!-- cellpadding: determina o espaço entre o conteúdo e a borda da célula-->
+			<tr>
+				<th>Cabeçalho 1</th>
+				<th>Cabeçalho 2</th>
+			</tr>
+			<tr>
+				<td align="center">Item</td>
+				<td align="center">Item</td>
+			</tr>
+			<tr>
+				<td align="center">Item</td>
+				<td align="center">Item</td>
+			</tr>
+		</table>
+			
+	</body>
+</html>
