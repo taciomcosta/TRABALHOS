@@ -1,18 +1,20 @@
-Algoritmo "semnome"
+Algoritmo "Calculadora binário"
 
 Var
-y,i:inteiro
+y,i,z:inteiro
 b: vetor [1..11] de inteiro
-x:real
+x,num:real
 
 
 
 Inicio
-escreval("Algoritmo - Calculadora de bin�rios")
+escreval("Algoritmo - Calculadora de binários")
 escreval
-escreva("Digite um n�mero: ")
-leia(x)
+escreva("Digite um número: ")
+leia(num)
 //PROCESSAMENTO
+
+x <- num
 i <- 1
 enquanto (x>=2) faca
 se (x%2=1) entao
@@ -25,14 +27,17 @@ fimse
 i<-i+1
 fimenquanto
 y <- i
-i <-1
-//escreva(b[10],b[9],b[8],b[7],b[6],b[5],b[4],b[3],b[2],b[1],x%2)
+z <-0
+i <- 1
 
-enquanto (y>i) faca
-escreva(b[i])
-i <- i+1
-fimenquanto
-escreva(x%2)
+  escreva(num," em binários é ",x%2)
+  enquanto (y+1>i) faca
+  escreva(b[i])
+               i <- i+1
+  fimenquanto
+  
+
+
 
 
 Fimalgoritmo
