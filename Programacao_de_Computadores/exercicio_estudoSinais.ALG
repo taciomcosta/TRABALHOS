@@ -19,6 +19,8 @@ x <- -b/a
 
 //SAÍDA
 limpatela
+escreval("Estudo do sinal")
+escreval
 
 se(a>0) entao
         escreval(a,">0 -> Reta crescente")
@@ -31,7 +33,7 @@ fimse
 se(a<0) entao
         escreval("f(x) = ",a,"x + ",b)
         escreval
-        escreval(a,">0 -> Reta crescente")
+        escreval(a,">0 -> Reta decrescente")
         escreval(" raiz: x =",x)
         escreval
         escreval("f(x)< 0  <->  x >",x,")")
