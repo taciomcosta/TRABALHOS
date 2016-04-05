@@ -8,13 +8,13 @@ escreval("Algoritmo - Distância da escada")
 escreval
 
 //ENTRADA
-escreva("Digite a altura da escada: ")
+escreva("Digite o ângulo da escada: ")
 leia(h)
 escreva("Digite a distância da escada até a parede: ")
 leia(d)
 
 //PROCESSAMENTO
-res <- raizq(h^2+d^2)
+res <- d/Tan(GraupRad(h))
 
 
 //SAÍDA
