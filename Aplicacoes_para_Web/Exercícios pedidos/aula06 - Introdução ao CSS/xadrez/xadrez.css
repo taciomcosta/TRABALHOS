@@ -1,0 +1,34 @@
+h1{
+	text-align:center;
+}
+
+table{
+	margin-left: 30%;
+	margin-top:2%;
+	border: 1px solid #DADADA;
+	background-color:#A0A0A0;	
+	padding:0;
+
+}
+
+img{
+	width:60px;
+}
+
+tr{
+	padding:0;
+	margin:0;
+}
+td{
+	height:70px;
+	width:40px;
+	padding:5px;
+	border: 0px solid #9A9A9A;
+	margin:0;
+}
+
+.cinza{
+	background-color:#BABABA;
+}
+
+.branco{background-color:#FFFFFF;}
