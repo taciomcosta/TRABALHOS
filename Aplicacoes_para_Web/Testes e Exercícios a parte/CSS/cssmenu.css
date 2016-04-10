@@ -1,0 +1,79 @@
+/*CSS-Document*/
+body{
+	padding:0%;
+	margin:0;
+}
+/*
+Cor em hsl
+
+Sintaxe: background-color:hsl(ângulo da cor, saturação%, luminosidade% )
+- ângulo da cor:
+0 - vermelho
+60 - amarelo
+120 - verde
+180 - ciano
+240 - azul
+300 - púrpura
+360 - vermelho
+
+-saturação -> pureza da cor 0 a 100%
+
+-luminosidade -> 50% é o normal , sendo 0% preto e 100% branco
+*/
+ul{
+	font-family: Arial;
+	font-size: 100%;
+	background-color: hsl(160,50%,50%);	
+	height:30px;
+	color:#EEE;
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:10px;
+	width:auto;
+
+	
+}
+
+#Home{
+
+
+}
+li{
+	list-style-type:none;
+	display:inline;
+	margin-right: 40px;
+	margin-left:40px;
+	background-color:#008B8B;
+	width:80px;
+	
+}
+#submenu{
+	display:none;
+}
+
+.bloco{
+	display:block;
+}
+
+a{
+text-decoration:none;
+color:#EEE;
+width:70px;
+
+
+}
+
+
+li:hover{
+	background-color:#008B8B;
+
+	font-weight: bold;
+}
+
+#menu{
+	background-color:#FFFFAA;
+	margin-left:-3%;
+	text-align:center;
+	margin-top:px;
+	
+}

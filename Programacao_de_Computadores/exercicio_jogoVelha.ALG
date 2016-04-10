@@ -1,16 +1,21 @@
-Algoritmo "jogoVelha"
+Algoritmo "Jogo da Velha"
 
 Var
 n1,n2: caractere
 a1,a2,a3,b1,b2,b3,c1,c2,c3:caractere
-j1,j2,j3,j4,j5:caractere
-g1,g2,g3,g4:caractere
-va1,va2,va3,vb1,vb2,vb3,vc1,vc2,vc3:logico
+j1,j2:caractere
+x1,y1:caractere
+res: caractere
+x,y: inteiro
+cont: inteiro
+
 
 
 Inicio
 //ENTRADA
-escreval("Jogo da véia")
+
+limpatela
+escreval("Jogo da Velha")
 escreval
 escreval
 escreval("Jogador 1, insira seu nome: ")
@@ -19,758 +24,194 @@ escreval
 escreva("Jogador 2, insira seu nome: ")
 leia(n2)
 escreval
-escreval(n1, "você será 'X'")
-escreval(n2, "você será 'O'")
+
 
 //PROCESSAMENTO
-a1 <- "a1"
-a2 <- "a2"
-a3 <- "a3"
-b1 <- "b1"
-b2 <- "b2"
-b3 <- "b3"
-c1 <- "c1"
-c2 <- "c2"
-c3 <- "c3"
+a1 <- "A1"
+a2 <- "A2"
+a3 <- "A3"
+b1 <- "B1"
+b2 <- "B2"
+b3 <- "B3"
+c1 <- "C1"
+c2 <- "C2"
+c3 <- "C3"
+cont <- 3
+escreval(n1,", deseja ser X ou O?")
+leia(j1)
+se (j1="X") entao
+   j2 <- "O"
+   senao
+   j2 <- "X"
+fimse
+enquanto (((a1<>j1) ou (a2<>j1) ou (a3<>j1)) e ((b1<>j1) ou (b2<>j1) ou (b3<>j1)) e ((c1<>j1) ou (c2<>j1) ou (c3<>j1)) e ((a1<>j1) ou (b1<>j1) ou (c1<>j1)) e ((a2<>j1) ou (b2<>j1) ou (c2<>j1)) e ((a3<>j1) ou (b3<>j1) ou (c3<>j1)) e ((a1<>j1) ou (b2<>j1) ou (c3<>j1)) e ((a3<>j1) ou (b2<>j1) ou (c1<>j1))) e ((a1<>j2) ou (a2<>j2) ou (a3<>j2)) e ((b1<>j2) ou (b2<>j2) ou (b3<>j2)) e ((c1<>j2) ou (c2<>j2) ou (c3<>j2)) e ((a1<>j2) ou (b1<>j2) ou (c1<>j2)) e ((a2<>j2) ou (b2<>j2) ou (c2<>j2)) e ((a3<>j2) ou (b3<>j2) ou (c3<>j2)) e ((a1<>j2) ou (b2<>j2) ou (c3<>j2)) e ((a3<>j2) ou (b2<>j2) ou (c1<>j2)) faca
+         se (cont=12) entao
+                  limpatela
+                  escreval("Jogo da Velha")
+                  escreval
+                  escreval
+                  escreval("_",a1,"_|_",a2,"_|_",a3,"_")
+                  escreval("_",b1,"_|_",b2,"_|_",b3,"_")
+                  escreval("_",c1,"_|_",c2,"_|_",c3,"_")
+                  escreval
+                  escreva("Deu Velha!")
+                  Fimalgoritmo
+                  fimse
+         se (cont%2=1) entao
+            limpatela
+            escreval("Jogo da Velha")
+            escreval
+            escreval
+            escreval("_",a1,"_|_",a2,"_|_",a3,"_")
+            escreval("_",b1,"_|_",b2,"_|_",b3,"_")
+            escreval("_",c1,"_|_",c2,"_|_",c3,"_")
+            escreval
+            escreval(n1, ", é a sua vez. Digite o valor onde deseja jogar:")
+            leia(x1)
+         se (x1="a1") entao
+            x <- 11
+            senao
+            se (x1="a2") entao
+               x <- 12
+               senao
+               se (x1="a3") entao
+                  x <- 13
+                  senao
+               se (x1="b1") entao
+                  x <- 21
+                  senao
+                  se (x1="b2") entao
+                     x <- 22
+                     senao
+                     se (x1="b3") entao
+                        x <- 23
+                        senao
+                        se (x1="c1") entao
+                           x <- 31
+                           senao
+                           se (x1="c2") entao
+                              x <- 32
+                              senao
+                              se (x1="c3") entao
+                              x <- 33
+                              fimse
+                           fimse
+                        fimse
+                     fimse
+                  fimse
+               fimse
+            fimse
+         fimse
+       fimse
 
-va1 <- falso
-va2 <- falso
-va3 <- falso
-vb1 <- falso
-vb2 <- falso
-vb3 <- falso
-vc1 <- falso
-vc2 <- falso
-vc3 <- falso
+       escolha x
+               caso 11
+               a1 <- j1
+               caso 12
+               a2 <- j1
+               caso 13
+               a3 <- j1
+               caso 21
+               b1 <- j1
+               caso 22
+               b2 <- j1
+               caso 23
+               b3 <- j1
+               caso 31
+               c1 <- j1
+               caso 32
+               c2 <- j1
+               caso 33
+               c3 <- j1
+       fimescolha
+       cont <- cont + 1
+       senao
+            limpatela
+            escreval("Jogo da Velha")
+            escreval
+            escreval
+            escreval("_",a1,"_|_",a2,"_|_",a3,"_")
+            escreval("_",b1,"_|_",b2,"_|_",b3,"_")
+            escreval("_",c1,"_|_",c2,"_|_",c3,"_")
+            escreval
+            escreval(n2, ", é a sua vez. Digite o valor onde deseja jogar:")
+            leia(y1)
+            se (y1="a1") entao
+               y <- 11
+               senao
+                    se (y1="a2") entao
+                    y <- 12
+                    senao
+                         se (y1="a3") entao
+                            y <- 13
+                            senao
+                            se (y1="b1") entao
+                               y <- 21
+                               senao
+                               se (y1="b2") entao
+                                  y <- 22
+                                  senao
+                                  se (y1="b3") entao
+                                     y <- 23
+                                     senao
+                                     se (y1="c1") entao
+                                        y <- 31
+                                        senao
+                                        se (y1="c2") entao
+                                           y <- 32
+                                           senao
+                                           se (y1="c3") entao
+                                              y <- 33
+                                           fimse
+                                        fimse
+                                     fimse
+                                  fimse
+                               fimse
+                            fimse
+                         fimse
+                    fimse
+               fimse
+
+               escolha y
+                       caso 11
+                            a1 <- j2
+                       caso 12
+                            a2 <- j2
+                       caso 13
+                            a3 <- j2
+                       caso 21
+                            b1 <- j2
+                       caso 22
+                            b2 <- j2
+                       caso 23
+                            b3 <- j2
+                       caso 31
+                            c1 <- j2
+                       caso 32
+                            c2 <- j2
+                       caso 33
+                            c3 <- j2
+               fimescolha
+               cont <- cont + 1
+         fimse
+fimenquanto
 
 limpatela
-escreval("Jogo da véia")
+escreval("Jogo da Velha")
 escreval
 escreval
-escreval("_A1_|_A2_|_A3_")
-escreval("_B1_|_B2_|_B3_")
-escreval("_C1_|_C2_|_C3_")
+
+escreval("_",a1,"_|_",a2,"_|_",a3,"_")
+escreval("_",b1,"_|_",b2,"_|_",b3,"_")
+escreval("_",c1,"_|_",c2,"_|_",c3,"_")
 escreval
-escreval(n1, ", é a sua vez. Digite o valor onde deseja jogar:")
-leia(j1)
 
-se (j1=a1) entao
-   limpatela
-   escreval("Jogo da véia")
+se (cont%2=1) entao
    escreval
-   escreval
-   escreval("_X_|_A2_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-   va1 <- verdadeiro
-   
-
+   escreva(n2," é o vencedor!!!")
+   senao
+        escreva(n1," é o vencedor!!!")
 fimse
-
-se (j1=a2) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_X_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-   va2 <- verdadeiro
-
-
-fimse
-
-se (j1=a3) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_X_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-   va3 <- verdadeiro
-
-fimse
-
-se (j1=b1) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_A3_")
-   escreval("_X_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-   vb1 <- verdadeiro
-   
-
-fimse
-
-
-se (j1=b2) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_A3_")
-   escreval("_B!_|_X_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-   vb2 <- verdadeiro
-
-fimse
-
-
-se (j1=b3) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_A3_")
-   escreval("_B1_|_B2_|_X_")
-   escreval("_C1_|_C2_|_C3_")
-   vb3 <- verdadeiro
-
-fimse
-
-
-se (j1=c1) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_X_|_C2_|_C3_")
-   vc1 <- verdadeiro
-
-fimse
-
-
-se (j1=c2) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_A3_")
-   escreval("_B!_|_B2_|_B3_")
-   escreval("_C1_|_X_|_C3_")
-   vc2 <- verdadeiro
-
-fimse
-
-
-se (j1=c3) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_X_")
-   vc3 <- verdadeiro
-
-
-fimse
-
-escreval(n2, ", é a sua vez. Digite o valor onde deseja jogar:")
-leia(g1)
-
-se (g1=a1) e (va1=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_X_|_A2_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-
-
-senao
-     se (g1=a1) e (va2=verdadeiro) entao
-        limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_O_|_X_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-    senao
-         se (g1=a1) e (va3=verdadeiro) entao
-        limpatela
-        escreval("Jogo da véia")
-        escreval
-        escreval
-        escreval("_O_|_A2_|_X_")
-        escreval("_B1_|_B2_|_B3_")
-        escreval("_C1_|_C2_|_C3_")
-
-        senao
-             se (g1=a1) e (vb1=verdadeiro) entao
-             limpatela
-             escreval("Jogo da véia")
-             escreval
-             escreval
-             escreval("_O_|_A2_|_A3_")
-             escreval("_X_|_B2_|_B3_")
-             escreval("_C1_|_C2_|_C3_")
-
-             senao
-                  se (g1=a1) e (vb2=verdadeiro) entao
-                  limpatela
-                  escreval("Jogo da véia")
-                  escreval
-                  escreval
-                  escreval("_O_|_A2_|_A3_")
-                  escreval("_B1_|_X_|_B3_")
-                  escreval("_C1_|_C2_|_C3_")
-
-                  senao
-                       se (g1=a1) e (vb3=verdadeiro) entao
-                       limpatela
-                       escreval("Jogo da véia")
-                       escreval
-                       escreval
-                       escreval("_O_|_A2_|_A3_")
-                       escreval("_B1_|_B2_|_X_")
-                       escreval("_C1_|_C2_|_C3_")
-
-                       senao
-                            se (g1=a1) e (vc1=verdadeiro) entao
-                            limpatela
-                            escreval("    Jogo da véia")
-                            escreval
-                            escreval
-                            escreval("_O_|_A2_|_A3_")
-                            escreval("_B1_|_B2_|_B3_")
-                            escreval("_X_|_C2_|_C3_")
-
-                            senao
-                                    se (g1=a1) e (vc2=verdadeiro) entao
-                                    limpatela
-                                    escreval("Jogo da véia")
-                                    escreval
-                                    escreval
-                                    escreval("_O_|_A2_|_A3_")
-                                    escreval("_B1_|_B2_|_B3_")
-                                    escreval("_C1_|_X_|_C3_")
-
-                                    senao
-                                         se (g1=a1) e (vc3=verdadeiro) entao
-                                         limpatela
-                                         escreval("Jogo da véia")
-                                         escreval
-                                         escreval
-                                         escreval("_O_|_A2_|_A3_")
-                                         escreval("_B1_|_B2_|_B3_")
-                                         escreval("_C1_|_C2_|_X_")
-
-                                         senao
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-        
-
-
-
-
-se (g1=a2) e (va1=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_X_|_O_|_A3_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=a2) e (va3=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_O_|_X_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=a2) e (vb1=verdadeiro) entao
-             limpatela
-             escreval("Jogo da véia")
-             escreval
-             escreval
-             escreval("_A1_|_O_|_A3_")
-             escreval("_X_|_B2_|_B3_")
-             escreval("_C1_|_C2_|_C3_")
-
-             senao
-                  se (g1=a2) e (vb2=verdadeiro) entao
-                  limpatela
-                  escreval("Jogo da véia")
-                  escreval
-                  escreval
-                  escreval("_A1_|_O_|_A3_")
-                  escreval("_B1_|_X_|_B3_")
-                  escreval("_C1_|_C2_|_C3_")
-
-                  senao
-                       se (g1=a2) e (vb3=verdadeiro) entao
-                       limpatela
-                       escreval("Jogo da véia")
-                       escreval
-                       escreval
-                       escreval("_A1_|_O_|_A3_")
-                       escreval("_B1_|_B2_|_X_")
-                       escreval("_C1_|_C2_|_C3_")
-
-                       senao
-                            se (g1=a2) e (vc1=verdadeiro) entao
-                            limpatela
-                            escreval("    Jogo da véia")
-                            escreval
-                            escreval
-                            escreval("_A!_|_O_|_A3_")
-                            escreval("_B1_|_B2_|_B3_")
-                            escreval("_X_|_C2_|_C3_")
-
-                            senao
-                                    se (g1=a2) e (vc2=verdadeiro) entao
-                                    limpatela
-                                    escreval("Jogo da véia")
-                                    escreval
-                                    escreval
-                                    escreval("_A1_|_O_|_A3_")
-                                    escreval("_B1_|_B2_|_B3_")
-                                    escreval("_C1_|_X_|_C3_")
-
-                                    senao
-                                         se (g1=a2) e (vc3=verdadeiro) entao
-                                         limpatela
-                                         escreval("Jogo da véia")
-                                         escreval
-                                         escreval
-                                         escreval("_A1_|_O_|_A3_")
-                                         escreval("_B1_|_B2_|_B3_")
-                                         escreval("_C1_|_C2_|_X_")
-
-                                         senao
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-
-se (g1=a3) e (va1=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_X_|_A2_|_O_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=a3) e (va2=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_X_|_O_")
-   escreval("_B1_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=a3) e (vb1=verdadeiro) entao
-             limpatela
-             escreval("Jogo da véia")
-             escreval
-             escreval
-             escreval("_A1_|_A2_|_O_")
-             escreval("_X_|_B2_|_B3_")
-             escreval("_C1_|_C2_|_C3_")
-
-             senao
-                  se (g1=a3) e (vb2=verdadeiro) entao
-                  limpatela
-                  escreval("Jogo da véia")
-                  escreval
-                  escreval
-                  escreval("_A1_|_A2_|_O_")
-                  escreval("_B1_|_X_|_B3_")
-                  escreval("_C1_|_C2_|_C3_")
-
-                  senao
-                       se (g1=a3) e (vb3=verdadeiro) entao
-                       limpatela
-                       escreval("Jogo da véia")
-                       escreval
-                       escreval
-                       escreval("_A1_|_A2_|_O_")
-                       escreval("_B1_|_B2_|_X_")
-                       escreval("_C1_|_C2_|_C3_")
-
-                       senao
-                            se (g1=a3) e (vc1=verdadeiro) entao
-                            limpatela
-                            escreval("    Jogo da véia")
-                            escreval
-                            escreval
-                            escreval("_A1_|_A2_|_O_")
-                            escreval("_B1_|_B2_|_B3_")
-                            escreval("_X_|_C2_|_C3_")
-
-                            senao
-                                    se (g1=a3) e (vc2=verdadeiro) entao
-                                    limpatela
-                                    escreval("Jogo da véia")
-                                    escreval
-                                    escreval
-                                    escreval("_A1_|_A2_|_O_")
-                                    escreval("_B1_|_B2_|_B3_")
-                                    escreval("_C1_|_X_|_C3_")
-
-                                    senao
-                                         se (g1=a3) e (vc3=verdadeiro) entao
-                                         limpatela
-                                         escreval("Jogo da véia")
-                                         escreval
-                                         escreval
-                                         escreval("_A1_|_A2_|_O_")
-                                         escreval("_B1_|_B2_|_B3_")
-                                         escreval("_C1_|_C2_|_X_")
-
-                                         senao
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         
-
-se (g1=b1) e (va1=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_X_|_A2_|_A3_")
-   escreval("_O_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=b1) e (va2=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_X_|_A3_")
-   escreval("_O_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-   
-
-se (g1=b1) e (va3=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_X_")
-   escreval("_O_|_B2_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=b1) e (vb1=verdadeiro) entao
-             limpatela
-             escreval("Jogo da véia")
-             escreval
-             escreval
-             escreval("_A1_|_A2_|_A3_")
-             escreval("_X_|_B2_|_B3_")
-             escreval("_C1_|_C2_|_C3_")
-
-             senao
-                  se (g1=b1) e (vb2=verdadeiro) entao
-                  limpatela
-                  escreval("Jogo da véia")
-                  escreval
-                  escreval
-                  escreval("_A1_|_A2_|_O_")
-                  escreval("_O_|_X_|_B3_")
-                  escreval("_C1_|_C2_|_C3_")
-
-                  senao
-                       se (g1=b1) e (vb3=verdadeiro) entao
-                       limpatela
-                       escreval("Jogo da véia")
-                       escreval
-                       escreval
-                       escreval("_A1_|_A2_|_O_")
-                       escreval("_O_|_B2_|_X_")
-                       escreval("_C1_|_C2_|_C3_")
-
-                       senao
-                            se (g1=b1) e (vc1=verdadeiro) entao
-                            limpatela
-                            escreval("    Jogo da véia")
-                            escreval
-                            escreval
-                            escreval("_A1_|_A2_|_O_")
-                            escreval("_O_|_B2_|_B3_")
-                            escreval("_X_|_C2_|_C3_")
-
-                            senao
-                                    se (g1=b1) e (vc2=verdadeiro) entao
-                                    limpatela
-                                    escreval("Jogo da véia")
-                                    escreval
-                                    escreval
-                                    escreval("_A1_|_A2_|_O_")
-                                    escreval("_O_|_B2_|_B3_")
-                                    escreval("_C1_|_X_|_C3_")
-
-                                    senao
-                                         se (g1=b1) e (vc3=verdadeiro) entao
-                                         limpatela
-                                         escreval("Jogo da véia")
-                                         escreval
-                                         escreval
-                                         escreval("_A1_|_A2_|_O_")
-                                         escreval("_O_|_B2_|_B3_")
-                                         escreval("_C1_|_C2_|_X_")
-
-                                         senao
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         
-
-se (g1=b2) e (va1=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_X_|_A2_|_A3_")
-   escreval("_B1_|_O_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=b2) e (va2=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_X_|_A3_")
-   escreval("_B1_|_O_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-se (g1=b2) e (va3=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_X_")
-   escreval("_B1_|_O_|_B3_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=b2) e (vb1=verdadeiro) entao
-             limpatela
-             escreval("Jogo da véia")
-             escreval
-             escreval
-             escreval("_A1_|_A2_|_A3_")
-             escreval("_X_|_O_|_B3_")
-             escreval("_C1_|_C2_|_C3_")
-
-             senao
-                  se (g1=b2) e (vb2=verdadeiro) entao
-                  limpatela
-                  escreval("Jogo da véia")
-                  escreval
-                  escreval
-                  escreval("_A1_|_A2_|_A3_")
-                  escreval("_B1_|_X_|_B3_")
-                  escreval("_C1_|_C2_|_C3_")
-
-                  senao
-                       se (g1=b2) e (vb3=verdadeiro) entao
-                       limpatela
-                       escreval("Jogo da véia")
-                       escreval
-                       escreval
-                       escreval("_A1_|_A2_|_A3_")
-                       escreval("_B1_|_O_|_X_")
-                       escreval("_C1_|_C2_|_C3_")
-
-                       senao
-                            se (g1=b2) e (vc1=verdadeiro) entao
-                            limpatela
-                            escreval("    Jogo da véia")
-                            escreval
-                            escreval
-                            escreval("_A1_|_A2_|_A3_")
-                            escreval("_B1_|_O_|_B3_")
-                            escreval("_X_|_C2_|_C3_")
-
-                            senao
-                                    se (g1=b2) e (vc2=verdadeiro) entao
-                                    limpatela
-                                    escreval("Jogo da véia")
-                                    escreval
-                                    escreval
-                                    escreval("_A1_|_A2_|_A3_")
-                                    escreval("_B1_|_O_|_B3_")
-                                    escreval("_C1_|_X_|_C3_")
-
-                                    senao
-                                         se (g1=b2) e (vc3=verdadeiro) entao
-                                         limpatela
-                                         escreval("Jogo da véia")
-                                         escreval
-                                         escreval
-                                         escreval("_A1_|_A2_|_A3_")
-                                         escreval("_B1_|_O_|_B3_")
-                                         escreval("_C1_|_C2_|_X_")
-
-                                         senao
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         
-
-se (g1=b3) e (va1=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_X_|_A2_|_A3_")
-   escreval("_B1_|_B2|_O_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=b3) e (va2=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_X_|_A3_")
-   escreval("_B1_|_B2_|_O_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-se (g1=b3) e (va3=verdadeiro) entao
-   limpatela
-   escreval("Jogo da véia")
-   escreval
-   escreval
-   escreval("_A1_|_A2_|_X_")
-   escreval("_B1_|_B2_|_O_")
-   escreval("_C1_|_C2_|_C3_")
-
-
-senao
-se (g1=b3) e (vb1=verdadeiro) entao
-             limpatela
-             escreval("Jogo da véia")
-             escreval
-             escreval
-             escreval("_A1_|_A2_|_A3_")
-             escreval("_B1_|_B2_|_O_")
-             escreval("_C1_|_C2_|_C3_")
-
-             senao
-                  se (g1=b3) e (vb2=verdadeiro) entao
-                  limpatela
-                  escreval("Jogo da véia")
-                  escreval
-                  escreval
-                  escreval("_A1_|_A2_|_A3_")
-                  escreval("_B1_|_X_|_O_")
-                  escreval("_C1_|_C2_|_C3_")
-
-                  senao
-                       se (g1=b3) e (vb3=verdadeiro) entao
-                       limpatela
-                       escreval("Jogo da véia")
-                       escreval
-                       escreval
-                       escreval("_A1_|_A2_|_A3_")
-                       escreval("_B1_|_B2_|_X_")
-                       escreval("_C1_|_C2_|_C3_")
-
-                       senao
-                            se (g1=b3) e (vc1=verdadeiro) entao
-                            limpatela
-                            escreval("    Jogo da véia")
-                            escreval
-                            escreval
-                            escreval("_A1_|_A2_|_A3_")
-                            escreval("_B1_|_B2_|_O_")
-                            escreval("_X_|_C2_|_C3_")
-
-                            senao
-                                    se (g1=b3) e (vc2=verdadeiro) entao
-                                    limpatela
-                                    escreval("Jogo da véia")
-                                    escreval
-                                    escreval
-                                    escreval("_A1_|_A2_|_A3_")
-                                    escreval("_B1_|_B2_|_O_")
-                                    escreval("_C1_|_X_|_C3_")
-
-                                    senao
-                                         se (g1=b3) e (vc3=verdadeiro) entao
-                                         limpatela
-                                         escreval("Jogo da véia")
-                                         escreval
-                                         escreval
-                                         escreval("_A1_|_A2_|_A3_")
-                                         escreval("_B1_|_B2_|_O_")
-                                         escreval("_C1_|_C2_|_X_")
-
-                                         senao
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-                                         fimse
-
+escreval
 
 Fimalgoritmo
