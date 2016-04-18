@@ -1,3377 +1,492 @@
-Algoritmo "jogoForca"
+Algoritmo "Jogo da Forca"
 
 Var
-
-   p,i,j,d: caractere
-   c1,c2,c3,c4,c5,c6,c7,c8,c9,c10: caractere
-   h1,h2,h3,h4,h5,h6,h7,h8,h9,h10: caractere
-   //pc: vetor [1 .. 10] de inteiro
-   pc,c: vetor [1 .. 10] de caractere
-   k,cont:inteiro
+j1,j2,palavra:caractere
+i: inteiro //contador do cp
+ir: inteiro // i reserva
+nc: inteiro // número de caracteres da palavra
+cp: vetor [1..14] de caractere  //vetor para separar cada caractere da Palavra
+r: vetor [1..14] de caractere // vetor da resposta
+lde,ldc: vetor [1..10] de caractere // vetor das letras digitadas
+x: caractere // digitado pelo jogador 2
+erro: inteiro // numero de tentativas que ainda restam
+cont: inteiro // usada para mostrar se o X já foi verdadeiro alguma vez
+cont2: inteiro // valida se o jogador 2 ganhou ou não
+dica: caractere
 
 Inicio
-
-   escreval ("Jogo da forca - para 2 ou mais jogadores ")
-   escreval
-   escreval
-
-   escreva("Jogador 1, digite o número de letras da sua palavra: ")
-   leia(i)
-   escreval
-
-   escreva("Jogador 1, digite sua palavra: ")
-   leia(p)
-   escreval
-
-   escreva("Jogador 1, deseja incluir uma dica? (S/N)")
-   leia(d)
-   escolha d
-
-   caso "s"
-
-      escreva("Jogador 1, digite uma dica: ")
-
-      leia(d)
-
-
-   caso "n"
-      d <- "nenhuma"
-   fimescolha
-
-   limpatela
-   c1<-" _ "
-   c2<-"_ "
-   c3<-"_ "
-   c4<-"_ "
-   c5<-"_ "
-   c6<-"_ "
-   c7<-"_ "
-   c8<-"_ "
-   c9<-"_ "
-   c10<-"_ "
-   escolha i
-   caso "10"
-   cont <-  1
-   para k de 1 ate 10 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-   caso "9"
-      cont <-  1
-      para k de 1 ate 9 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9)
-
-   caso "8"
-cont <-  1
-      para k de 1 ate 8 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8)
-
-
-   caso "7"
-cont <-  1
-      para k de 1 ate 7 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7)
-
-
-   caso "6"
-cont <-  1
-      para k de 1 ate 6 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3,c4,c5,c6)
-
-
-   caso "5"
-cont <-  1
-      para k de 1 ate 5 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3,c4,c5)
-
-   caso "4"
-cont <-  1
-      para k de 1 ate 4 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-
-      escreva("PALAVRA:",c1,c2,c3,c4)
-
-
-   caso "3"
-cont <-  1
-      para k de 1 ate 3 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2,c3)
-
-
-   caso "2"
-cont <-  1
-      para k de 1 ate 2 faca
-
-      c[k] <- copia(p,cont,1)
-      cont <- cont+1
-
-      fimpara
-      escreva("PALAVRA:",c1,c2)
-
-
-   fimescolha
-   escreval
-   escreval("Dica: ",d)
-   escreval
-
-   escreval("           ________________")
-   escreval(" 	        |          |      ")
-   escreval("	        |       ___|___")
-   escreval("	        |      | x < x |")
-   escreval("	        |      |___o___|")
-   escreval("	        |    O     |     O")
-   escreval("	        |    |  ___|___  |")
-   escreval("	        |    | |       | |")
-   escreval("	        |     \|       |/")
-   escreval("	        |      |_______|")
-   escreval("	        |        |   |")
-   escreval("                |        |   |")
-   escreval("                |        O   O")
-   escreval("      __________|__________")
-   escreval
-   escreval("Jogador 2, digite uma letra: ")
-   leia(h1)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-        
-             c1 <- h1
-        fimse
-        
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-        se (cont=5) entao
-
-             c5 <- h1
-        fimse
-        se (cont=6) entao
-
-             c6 <- h1
-        fimse
-        se (cont=7) entao
-
-             c7 <- h1
-        fimse
-        se (cont=8) entao
-
-             c8 <- h1
-        fimse
-        se (cont=9) entao
-
-             c9 <- h1
-        fimse
-        se (cont=10) entao
-
-             c10 <- h1
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-  
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-        se (cont=5) entao
-
-             c5 <- h1
-        fimse
-        se (cont=6) entao
-
-             c6 <- h1
-        fimse
-        se (cont=7) entao
-
-             c7 <- h1
-        fimse
-        se (cont=8) entao
-
-             c8 <- h1
-        fimse
-        se (cont=9) entao
-
-             c9 <- h1
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-        se (cont=5) entao
-
-             c5 <- h1
-        fimse
-        se (cont=6) entao
-
-             c6 <- h1
-        fimse
-        se (cont=7) entao
-
-             c7 <- h1
-        fimse
-        se (cont=8) entao
-
-             c8 <- h1
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-  
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-        se (cont=5) entao
-
-             c5 <- h1
-        fimse
-        se (cont=6) entao
-
-             c6 <- h1
-        fimse
-        se (cont=7) entao
-
-             c7 <- h1
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-  
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-        se (cont=5) entao
-
-             c5 <- h1
-        fimse
-        se (cont=6) entao
-
-             c6 <- h1
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-  
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-        se (cont=5) entao
-
-             c5 <- h1
-        fimse
-
-            fimse
-  fimpara
-  fimse
-  
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-        se (cont=4) entao
-
-             c4 <- h1
-        fimse
-
-   fimse
-  fimpara
-  fimse
-  
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-        se (cont=3) entao
-
-             c3 <- h1
-        fimse
-       fimse
-  fimpara
-  fimse
-  
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h1=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h1
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h1
-        fimse
-
-   fimse
-  fimpara
-
-
+escreval("Jogo da Forca")
+escreval
+//ENTRADA
+escreva("Jogador 1, insira seu nome: ")
+leia(j1)
+escreva("Jogador 2, insira seu nome: ")
+leia(j2)
+
+escreva(j1, ", digite uma palavra de até 14 letras: ")
+leia(palavra)
+limpatela
+
+escreva( j1, ", deseja incluir dica (s/n)? ")
+leia(dica)
+se (dica="s") entao
+   escreva("Digite uma palavra para a dica (ex: ANIMAL) : ")
+   leia(dica)
+   senao
+   dica <- "Nenhuma"
 fimse
 
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
+//ATRIBUINDO CADA CARACTERE PARA UMA VARIÁVEL
+i <- 1
+enquanto (i<14) faca
+         cp[i] <- copia(palavra,i,1)
+         i <- i+1
+fimenquanto
 
+//CONTANDO O NÚMERO DE CARACTERES DA PALAVRA
+i <- 1
+nc <- 0
+enquanto (cp[i]<>"") faca
+         nc <- i
+         i <- i+1
+fimenquanto
 
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h2)
+//ATRIBUINDO "_" ao vetor r
+ir <- nc
+i <- nc
+i <- 1
+enquanto (i <= nc) faca
+         r[i] <- " _ "
+         i <- i+1
+fimenquanto
 
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
+//CONTAGEM DAS CHANCES
+i <- 1
+erro <- 10
+enquanto (erro > 0) faca
+          limpatela
+          escreval("---- Jogo da Forca ----")
+          //SE NÃO HOUVER x NA PALAVRA
+          i <- 1
+          se (cont=1) entao
+             erro <- erro -1
+             escolha erro
+                     caso 10
+                          escreval("           ________________")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 9
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 8
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c1 <- h2
-        fimse
+                     caso 7
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-        se (cont=2) entao
+                     caso 6
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c2 <- h2
-        fimse
-        se (cont=3) entao
+                     caso 5
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 4
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 3
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c3 <- h2
-        fimse
-        se (cont=4) entao
+                     caso 2
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval("	        |        |   |")
+                          escreval("                |        |   |")
+                          escreval
+                          escreval
+                     caso 1
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval("	        |        |   |")
+                          escreval("                |        |   |")
+                          escreval("                |        O   O")
+                          escreval("      __________|__________")
+//CASO O JOGADOR PERCA TODAS TENTATIVAS
+                     caso 0
+                          limpatela
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | x < x |")
+                          escreval("	        |      |___o___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval("	        |        |   |")
+                          escreval("                |        |   |")
+                          escreval("                |        O   O")
+                          escreval("      __________|__________")
+                          escreval
+                          escreva(j1," é o vencedor!!!")
+                          fimalgoritmo
+             fimescolha
+             escreval("Não há '",x,"' na palavra!")
+             enquanto (lde[i] <> "") faca
+                      i <- i+1
+             fimenquanto
+             lde[i] <- x
+          fimse
+          // SE HOUVER X NA PALAVRA
+          i <- 1
+          se (cont=0) entao
+             escolha erro
+                     caso 10
+                          escreval("           ________________")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 9
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 8
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c4 <- h2
-        fimse
-        se (cont=5) entao
+                     caso 7
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c5 <- h2
-        fimse
-        se (cont=6) entao
+                     caso 6
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c6 <- h2
-        fimse
-        se (cont=7) entao
+                     caso 5
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 4
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                          escreval
+                     caso 3
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval
+                          escreval
+                          escreval
+                          escreval
 
-             c7 <- h2
-        fimse
-        se (cont=8) entao
-
-             c8 <- h2
-        fimse
-        se (cont=9) entao
-
-             c9 <- h2
-        fimse
-        se (cont=10) entao
-
-             c10 <- h2
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-        se (cont=4) entao
-
-             c4 <- h2
-        fimse
-        se (cont=5) entao
-
-             c5 <- h2
-        fimse
-        se (cont=6) entao
-
-             c6 <- h2
-        fimse
-        se (cont=7) entao
-
-             c7 <- h2
-        fimse
-        se (cont=8) entao
-
-             c8 <- h2
-        fimse
-        se (cont=9) entao
-
-             c9 <- h2
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-        se (cont=4) entao
-
-             c4 <- h2
-        fimse
-        se (cont=5) entao
-
-             c5 <- h2
-        fimse
-        se (cont=6) entao
-
-             c6 <- h2
-        fimse
-        se (cont=7) entao
-
-             c7 <- h2
-        fimse
-        se (cont=8) entao
-
-             c8 <- h2
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-        se (cont=4) entao
-
-             c4 <- h2
-        fimse
-        se (cont=5) entao
-
-             c5 <- h2
-        fimse
-        se (cont=6) entao
-
-             c6 <- h2
-        fimse
-        se (cont=7) entao
-
-             c7 <- h2
-        fimse
-
+                     caso 2
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval("	        |        |   |")
+                          escreval("                |        |   |")
+                          escreval
+                          escreval
+                     caso 1
+                          escreval("           ________________")
+                          escreval(" 	        |          |      ")
+                          escreval("	        |       ___|___")
+                          escreval("	        |      | o < o |")
+                          escreval("	        |      |___u___|")
+                          escreval("	        |    O     |     O")
+                          escreval("	        |    |  ___|___  |")
+                          escreval("	        |    | |       | |")
+                          escreval("	        |     \|       |/")
+                          escreval("	        |      |_______|")
+                          escreval("	        |        |   |")
+                          escreval("                |        |   |")
+                          escreval("                |        O   O")
+                          escreval("      __________|__________")
+             fimescolha
+             enquanto (ldc[i] <> "") faca
+                      i <- i+1
+             fimenquanto
+             ldc[i] <- x
+          fimse
+          //EXIBINDO A PALAVRA
+          i <- 1
+          escreva("PALAVRA: ")
+          enquanto (i <= nc) faca
+                   escreva(r[i])
+                   i <- i+1
+          fimenquanto
+          // CASO O JOGADOR VENÇA
+          i <- 1
+          cont2 <-1
+          enquanto (i<14) faca
+                   ir <-i
+                   se (r[i]=cp[i]) entao
+                      i <- i+1
+                      cont2 <- cont2 +1
+                   fimse
+                   se (ir=i) entao
+                      i <- 14
+                   fimse
+          fimenquanto
+          se (cont2 = 14) entao
+              limpatela
+                               escreval
+                               escreval(j2, " é o vencedor!!!")
+                               escreval("PALAVRA: ",palavra)
+                               escreval
+                               escreval
+                               fimalgoritmo
+          fimse
+          //EXIBINDO AS LETRAS DIGITADAS
+          i <- 1
+          escreval
+          escreval
+          escreva("Letras digitadas: ")
+          enquanto (i<=10) e ((lde[i]<>"") ou (ldc[i]<>""))faca
+                   se (lde[i]<>"") entao
+                      escreva(lde[i])
+                      escreva(" ")
+                      senao
+                           escreva(lde[i])
+                   fimse
+                   se (ldc[i]<>"") entao
+                      escreva(ldc[i])
+                      escreva(" ")
+                      senao
+                      escreva(ldc[i])
+                   fimse
+                   i <- i+1
+          fimenquanto
+          escreval
+          escreval
+          //EXIBINDO A DICA
+          escreva("DICA: ",dica)
+          escreval
+          // COMPARAÇÃO
+          escreva(j2,", digite uma letra: ")
+          leia(x)
+          escreval
+          escreval
+          i <- 1
+          cont <- 2
+          enquanto (i <= nc) faca
+                   se (x = cp[i]) e (cp[i] <> "") e (cp[i] <> " _ ") entao
+                      r[i] <- cp [i]
+                      cont <- 0
+                      senao
+                      se (cont=2) entao
+                      cont <- 1
                       fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-        se (cont=4) entao
-
-             c4 <- h2
-        fimse
-        se (cont=5) entao
-
-             c5 <- h2
-        fimse
-        se (cont=6) entao
-
-             c6 <- h2
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-        se (cont=4) entao
-
-             c4 <- h2
-        fimse
-        se (cont=5) entao
-
-             c5 <- h2
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-        se (cont=4) entao
-
-             c4 <- h2
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-        se (cont=3) entao
-
-             c3 <- h2
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h2=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h2
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h2
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-     
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h3)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-        se (cont=5) entao
-
-             c5 <- h3
-        fimse
-        se (cont=6) entao
-
-             c6 <- h3
-        fimse
-        se (cont=7) entao
-
-             c7 <- h3
-        fimse
-        se (cont=8) entao
-
-             c8 <- h3
-        fimse
-        se (cont=9) entao
-
-             c9 <- h3
-        fimse
-        se (cont=10) entao
-
-             c10 <- h3
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-        se (cont=5) entao
-
-             c5 <- h3
-        fimse
-        se (cont=6) entao
-
-             c6 <- h3
-        fimse
-        se (cont=7) entao
-
-             c7 <- h3
-        fimse
-        se (cont=8) entao
-
-             c8 <- h3
-        fimse
-        se (cont=9) entao
-
-             c9 <- h3
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-        se (cont=5) entao
-
-             c5 <- h3
-        fimse
-        se (cont=6) entao
-
-             c6 <- h3
-        fimse
-        se (cont=7) entao
-
-             c7 <- h3
-        fimse
-        se (cont=8) entao
-
-             c8 <- h3
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-        se (cont=5) entao
-
-             c5 <- h3
-        fimse
-        se (cont=6) entao
-
-             c6 <- h3
-        fimse
-        se (cont=7) entao
-
-             c7 <- h3
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-        se (cont=5) entao
-
-             c5 <- h3
-        fimse
-        se (cont=6) entao
-
-             c6 <- h3
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-        se (cont=5) entao
-
-             c5 <- h3
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-        se (cont=4) entao
-
-             c4 <- h3
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-        se (cont=3) entao
-
-             c3 <- h3
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h3=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h3
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h3
-        fimse
-
-   fimse
-  fimpara
-  
-     escreval("Jogador 2, digite uma letra: ")
-   leia(h4)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-        se (cont=5) entao
-
-             c5 <- h4
-        fimse
-        se (cont=6) entao
-
-             c6 <- h4
-        fimse
-        se (cont=7) entao
-
-             c7 <- h4
-        fimse
-        se (cont=8) entao
-
-             c8 <- h4
-        fimse
-        se (cont=9) entao
-
-             c9 <- h4
-        fimse
-        se (cont=10) entao
-
-             c10 <- h4
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-        se (cont=5) entao
-
-             c5 <- h4
-        fimse
-        se (cont=6) entao
-
-             c6 <- h4
-        fimse
-        se (cont=7) entao
-
-             c7 <- h4
-        fimse
-        se (cont=8) entao
-
-             c8 <- h4
-        fimse
-        se (cont=9) entao
-
-             c9 <- h4
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-        se (cont=5) entao
-
-             c5 <- h4
-        fimse
-        se (cont=6) entao
-
-             c6 <- h4
-        fimse
-        se (cont=7) entao
-
-             c7 <- h4
-        fimse
-        se (cont=8) entao
-
-             c8 <- h4
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-        se (cont=5) entao
-
-             c5 <- h4
-        fimse
-        se (cont=6) entao
-
-             c6 <- h4
-        fimse
-        se (cont=7) entao
-
-             c7 <- h4
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-        se (cont=5) entao
-
-             c5 <- h4
-        fimse
-        se (cont=6) entao
-
-             c6 <- h4
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-        se (cont=5) entao
-
-             c5 <- h4
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-        se (cont=4) entao
-
-             c4 <- h4
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-        se (cont=3) entao
-
-             c3 <- h4
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h4=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h4
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h4
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-     
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h5)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-        se (cont=5) entao
-
-             c5 <- h5
-        fimse
-        se (cont=6) entao
-
-             c6 <- h5
-        fimse
-        se (cont=7) entao
-
-             c7 <- h5
-        fimse
-        se (cont=8) entao
-
-             c8 <- h5
-        fimse
-        se (cont=9) entao
-
-             c9 <- h5
-        fimse
-        se (cont=10) entao
-
-             c10 <- h5
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-        se (cont=5) entao
-
-             c5 <- h5
-        fimse
-        se (cont=6) entao
-
-             c6 <- h5
-        fimse
-        se (cont=7) entao
-
-             c7 <- h5
-        fimse
-        se (cont=8) entao
-
-             c8 <- h5
-        fimse
-        se (cont=9) entao
-
-             c9 <- h5
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-        se (cont=5) entao
-
-             c5 <- h5
-        fimse
-        se (cont=6) entao
-
-             c6 <- h5
-        fimse
-        se (cont=7) entao
-
-             c7 <- h5
-        fimse
-        se (cont=8) entao
-
-             c8 <- h5
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-        se (cont=5) entao
-
-             c5 <- h5
-        fimse
-        se (cont=6) entao
-
-             c6 <- h5
-        fimse
-        se (cont=7) entao
-
-             c7 <- h5
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-        se (cont=5) entao
-
-             c5 <- h5
-        fimse
-        se (cont=6) entao
-
-             c6 <- h5
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-        se (cont=5) entao
-
-             c5 <- h5
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-        se (cont=4) entao
-
-             c4 <- h5
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-        se (cont=3) entao
-
-             c3 <- h5
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h5=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h5
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h5
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-     
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h6)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-        se (cont=5) entao
-
-             c5 <- h6
-        fimse
-        se (cont=6) entao
-
-             c6 <- h6
-        fimse
-        se (cont=7) entao
-
-             c7 <- h6
-        fimse
-        se (cont=8) entao
-
-             c8 <- h6
-        fimse
-        se (cont=9) entao
-
-             c9 <- h6
-        fimse
-        se (cont=10) entao
-
-             c10 <- h6
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-        se (cont=5) entao
-
-             c5 <- h6
-        fimse
-        se (cont=6) entao
-
-             c6 <- h6
-        fimse
-        se (cont=7) entao
-
-             c7 <- h6
-        fimse
-        se (cont=8) entao
-
-             c8 <- h6
-        fimse
-        se (cont=9) entao
-
-             c9 <- h6
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-        se (cont=5) entao
-
-             c5 <- h6
-        fimse
-        se (cont=6) entao
-
-             c6 <- h6
-        fimse
-        se (cont=7) entao
-
-             c7 <- h6
-        fimse
-        se (cont=8) entao
-
-             c8 <- h6
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-        se (cont=5) entao
-
-             c5 <- h6
-        fimse
-        se (cont=6) entao
-
-             c6 <- h6
-        fimse
-        se (cont=7) entao
-
-             c7 <- h6
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-        se (cont=5) entao
-
-             c5 <- h6
-        fimse
-        se (cont=6) entao
-
-             c6 <- h6
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-        se (cont=5) entao
-
-             c5 <- h6
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-        se (cont=4) entao
-
-             c4 <- h6
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-        se (cont=3) entao
-
-             c3 <- h6
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h6=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h6
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h6
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-     
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h7)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-        se (cont=5) entao
-
-             c5 <- h7
-        fimse
-        se (cont=6) entao
-
-             c6 <- h7
-        fimse
-        se (cont=7) entao
-
-             c7 <- h7
-        fimse
-        se (cont=8) entao
-
-             c8 <- h7
-        fimse
-        se (cont=9) entao
-
-             c9 <- h7
-        fimse
-        se (cont=10) entao
-
-             c10 <- h7
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-        se (cont=5) entao
-
-             c5 <- h7
-        fimse
-        se (cont=6) entao
-
-             c6 <- h7
-        fimse
-        se (cont=7) entao
-
-             c7 <- h7
-        fimse
-        se (cont=8) entao
-
-             c8 <- h7
-        fimse
-        se (cont=9) entao
-
-             c9 <- h7
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-        se (cont=5) entao
-
-             c5 <- h7
-        fimse
-        se (cont=6) entao
-
-             c6 <- h7
-        fimse
-        se (cont=7) entao
-
-             c7 <- h7
-        fimse
-        se (cont=8) entao
-
-             c8 <- h7
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-        se (cont=5) entao
-
-             c5 <- h7
-        fimse
-        se (cont=6) entao
-
-             c6 <- h7
-        fimse
-        se (cont=7) entao
-
-             c7 <- h7
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-        se (cont=5) entao
-
-             c5 <- h7
-        fimse
-        se (cont=6) entao
-
-             c6 <- h7
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-        se (cont=5) entao
-
-             c5 <- h7
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-        se (cont=4) entao
-
-             c4 <- h7
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-        se (cont=3) entao
-
-             c3 <- h7
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h7=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h7
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h7
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-     
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h8)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-        se (cont=5) entao
-
-             c5 <- h8
-        fimse
-        se (cont=6) entao
-
-             c6 <- h8
-        fimse
-        se (cont=7) entao
-
-             c7 <- h8
-        fimse
-        se (cont=8) entao
-
-             c8 <- h8
-        fimse
-        se (cont=9) entao
-
-             c9 <- h8
-        fimse
-        se (cont=10) entao
-
-             c10 <- h8
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-        se (cont=5) entao
-
-             c5 <- h8
-        fimse
-        se (cont=6) entao
-
-             c6 <- h8
-        fimse
-        se (cont=7) entao
-
-             c7 <- h8
-        fimse
-        se (cont=8) entao
-
-             c8 <- h8
-        fimse
-        se (cont=9) entao
-
-             c9 <- h8
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-        se (cont=5) entao
-
-             c5 <- h8
-        fimse
-        se (cont=6) entao
-
-             c6 <- h8
-        fimse
-        se (cont=7) entao
-
-             c7 <- h8
-        fimse
-        se (cont=8) entao
-
-             c8 <- h8
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-        se (cont=5) entao
-
-             c5 <- h8
-        fimse
-        se (cont=6) entao
-
-             c6 <- h8
-        fimse
-        se (cont=7) entao
-
-             c7 <- h8
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-        se (cont=5) entao
-
-             c5 <- h8
-        fimse
-        se (cont=6) entao
-
-             c6 <- h8
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-        se (cont=5) entao
-
-             c5 <- h8
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-        se (cont=4) entao
-
-             c4 <- h8
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-        se (cont=3) entao
-
-             c3 <- h8
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h8=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h8
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h8
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h9)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-        se (cont=5) entao
-
-             c5 <- h9
-        fimse
-        se (cont=6) entao
-
-             c6 <- h9
-        fimse
-        se (cont=7) entao
-
-             c7 <- h9
-        fimse
-        se (cont=8) entao
-
-             c8 <- h9
-        fimse
-        se (cont=9) entao
-
-             c9 <- h9
-        fimse
-        se (cont=10) entao
-
-             c10 <- h9
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-        se (cont=5) entao
-
-             c5 <- h9
-        fimse
-        se (cont=6) entao
-
-             c6 <- h9
-        fimse
-        se (cont=7) entao
-
-             c7 <- h9
-        fimse
-        se (cont=8) entao
-
-             c8 <- h9
-        fimse
-        se (cont=9) entao
-
-             c9 <- h9
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-        se (cont=5) entao
-
-             c5 <- h9
-        fimse
-        se (cont=6) entao
-
-             c6 <- h9
-        fimse
-        se (cont=7) entao
-
-             c7 <- h9
-        fimse
-        se (cont=8) entao
-
-             c8 <- h9
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-        se (cont=5) entao
-
-             c5 <- h9
-        fimse
-        se (cont=6) entao
-
-             c6 <- h9
-        fimse
-        se (cont=7) entao
-
-             c7 <- h9
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-        se (cont=5) entao
-
-             c5 <- h9
-        fimse
-        se (cont=6) entao
-
-             c6 <- h9
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-        se (cont=5) entao
-
-             c5 <- h9
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-        se (cont=4) entao
-
-             c4 <- h9
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-        se (cont=3) entao
-
-             c3 <- h9
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h9=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h9
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h9
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
-     
-        escreval("Jogador 2, digite uma letra: ")
-   leia(h10)
-
-   j <- i
-      cont <- cont -1
-   se (cont =10) entao
-   cont <- 1
-  para k de 1 ate 10 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-        se (cont=5) entao
-
-             c5 <- h10
-        fimse
-        se (cont=6) entao
-
-             c6 <- h10
-        fimse
-        se (cont=7) entao
-
-             c7 <- h10
-        fimse
-        se (cont=8) entao
-
-             c8 <- h10
-        fimse
-        se (cont=9) entao
-
-             c9 <- h10
-        fimse
-        se (cont=10) entao
-
-             c10 <- h10
-        fimse
-
-
-        fimse
-  fimpara
-  fimse
-
-  se (cont =9) entao
-   cont <- 1
-  para k de 1 ate 9 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-        se (cont=5) entao
-
-             c5 <- h10
-        fimse
-        se (cont=6) entao
-
-             c6 <- h10
-        fimse
-        se (cont=7) entao
-
-             c7 <- h10
-        fimse
-        se (cont=8) entao
-
-             c8 <- h10
-        fimse
-        se (cont=9) entao
-
-             c9 <- h10
-        fimse
-
-
-         fimse
-
-  fimpara
-  fimse
-  se (cont =8) entao
-   cont <- 1
-  para k de 1 ate 8 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-        se (cont=5) entao
-
-             c5 <- h10
-        fimse
-        se (cont=6) entao
-
-             c6 <- h10
-        fimse
-        se (cont=7) entao
-
-             c7 <- h10
-        fimse
-        se (cont=8) entao
-
-             c8 <- h10
-        fimse
-
-                           fimse
-  fimpara
-  fimse
-
-  se (cont =7)      entao
-   cont <- 1
-  para k de 1 ate 7 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-        se (cont=5) entao
-
-             c5 <- h10
-        fimse
-        se (cont=6) entao
-
-             c6 <- h10
-        fimse
-        se (cont=7) entao
-
-             c7 <- h10
-        fimse
-
-                      fimse
-  fimpara
-  fimse
-
-  se (cont =6)       entao
-   cont <- 1
-  para k de 1 ate 6 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-        se (cont=5) entao
-
-             c5 <- h10
-        fimse
-        se (cont=6) entao
-
-             c6 <- h10
-        fimse
-
-                 fimse
-  fimpara
-  fimse
-
-
-  se (cont =5)            entao
-   cont <- 1
-  para k de 1 ate 5 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-        se (cont=5) entao
-
-             c5 <- h10
-        fimse
-
-            fimse
-  fimpara
-  fimse
-
-
-  se (cont =4)                      entao
-   cont <- 1
-  para k de 1 ate 4 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-        se (cont=4) entao
-
-             c4 <- h10
-        fimse
-
-   fimse
-  fimpara
-  fimse
-
-
-  se (cont =3)                 entao
-   cont <- 1
-  para k de 1 ate 3 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-        se (cont=3) entao
-
-             c3 <- h10
-        fimse
-       fimse
-  fimpara
-  fimse
-
-
-  se (cont =2)           entao
-   cont <- 1
-  para k de 1 ate 2 faca
-   se (h10=c[k]) entao
-        se (cont=1) entao
-
-             c1 <- h10
-        fimse
-
-        se (cont=2) entao
-
-             c2 <- h10
-        fimse
-
-   fimse
-  fimpara
-
-
-fimse
-
-     escreva("PALAVRA:",c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-
+                   fimse
+                   i <- i+1
+          fimenquanto
+fimenquanto
 Fimalgoritmo
