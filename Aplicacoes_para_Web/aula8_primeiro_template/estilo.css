@@ -1,0 +1,139 @@
+﻿/*GERAL*/
+body{
+	margin:0;
+	padding:0;
+	font-family:Calibri; /*fonte padrão do windows*/
+}
+a{
+	text-decoration:none;
+	color:#666;
+}
+
+div{
+	border: 1px solid black;
+}
+
+ul{
+	list-style:none; /*retira os marcadores da lista*/
+	margin:0;
+	padding:0;
+	overflow:auto;/*ajusta o tamanho da ul para o mesmo das li, já que estão flutuando. Logo, o CONTEÚDO é empurrado para baixo.*/
+}
+
+
+.float-left{
+	float:left;/*flutuando a imagem para a esquerda, o texto a envolverá pela direita, e vice-versa.*/
+}
+
+.float-right{
+	float:right;
+}
+
+/*CONTAINER*/
+#container{
+	width:1024px;
+	margin:0px auto; /*auto -> está definindo automaticamente as margens esquerda e direita com o mesmo tamanho*/
+	border:none;
+	border:1px solid #C0C0C0;
+}
+/*TOPO*/
+#topo{
+	height:120px;/*mesmo tamanho da imagem*/
+	border:none;
+}
+
+/*MENU*/
+#menu{
+	background:#222222;
+	border:none;
+	border-bottom:2px solid #FFF;
+}
+	
+#menu ul li{/*HIERARQUIA = AVÕ PAI FILHO*/
+	float:left;
+	border:none;
+	
+	
+}
+#menu ul li a{/*HIERARQUIA = BISAVÕ AVÕ PAI FILHO*/
+	display:block;
+	padding:15px 20px;/*o padding só funciona se o elemento é definido como em bloco*/
+	color:#C0C0C0;
+}
+
+#menu ul li a:hover{
+	background:#080808;
+	color:#FFF;
+}
+
+/*LATERAL*/
+#lateral{
+	clear:both;/**/
+	width:200px;
+	height:400px;
+	float: left;
+	border:none;
+}
+
+#lateral .titulo{
+	padding:5px 0px;
+	background:#428BCA;
+	color:#FFF;
+	font-size:18px;
+	border:none;
+}
+
+#lateral ul{
+	background:#F5F5F5;
+	border-right:1px solid #DDD;
+}
+
+#lateral ul li{
+	border-bottom:1px solid #DDD;
+}
+#lateral ul li a{
+	display:block;
+	padding:5px 0px;
+	color:#337AB7;
+	text-indent:8px;/*Espaço de parágrafo*/
+}
+
+#lateral ul li a:hover{
+	background:#87A8D7;
+	color:#FFF;
+}
+
+/*CONTEÚDO*/
+#conteudo{
+	margin-left:200px;/*tamanho superior ao do menu lateral, faz com que */
+	min-height:400px;/*Se não couber verticalmente no container, o min-height faz a altura do conteúdo diminuir*/
+	border:none;
+}
+
+#conteudo div{
+	border:none;
+	margin:10px; /*distancia as divs da margem do #conteudo*/
+}
+
+#conteudo div h1{
+	border-bottom:3px solid #428BCA;
+	color:#333;
+}
+
+#conteudo div p{
+	color:#555;
+}
+
+#conteudo div p img{
+	width:100px;
+}
+
+/*RODAPÉ*/
+#rodape{
+	background:#F9F9F9;
+	text-align:center;/*centraliza o texto dentro do container*/
+	padding:10px 0px;
+	border:none;
+	border-top:1px solid #C0C0C0;
+}
+

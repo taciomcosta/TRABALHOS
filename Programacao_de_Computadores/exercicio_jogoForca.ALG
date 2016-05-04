@@ -244,6 +244,7 @@ enquanto (erro > 0) faca
                           escreval("      __________|__________")
                           escreval
                           escreva(j1," é o vencedor!!!")
+                          escreval("PALAVRA:",palavra)
                           fimalgoritmo
              fimescolha
              escreval("Não há '",x,"' na palavra!")
