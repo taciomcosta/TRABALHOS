@@ -28,10 +28,10 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/Tacio/Desktop/Linguagem C/Meu_primeiro_projeto/tic-tac-toe-game.c",
+			"file": "newtoy.html",
 			"settings":
 			{
-				"buffer_size": 1894,
+				"buffer_size": 4941,
 				"line_ending": "Windows"
 			}
 		}
@@ -43,10 +43,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "bs3-ht",
+		"height": 173.0,
+		"last_filter": "syntax:java",
 		"selected_items":
 		[
+			[
+				"syntax:java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax:html",
+				"Set Syntax: HTML"
+			],
 			[
 				"bs3-ht",
 				"Snippet: bs3-html5-template"
@@ -84,7 +92,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 464.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -105,6 +113,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Tacio/Desktop/TRABALHOS/Aplicacoes_para_Web/Projeto Final/Project - Loja de Brinquedos/validacaoForms.js",
+		"/C/Users/Tacio/Desktop/Linguagem C/Head_First/TODO.c",
+		"/C/Users/Tacio/Desktop/JS/script1.html",
+		"/C/Users/Tacio/Desktop/JS/script2.js",
+		"/C/Users/Tacio/Desktop/JS/seila.c",
+		"/C/Users/Tacio/Desktop/JS/script1.js",
+		"/C/Users/Tacio/Desktop/testee.html",
+		"/C/Users/Tacio/Desktop/estilo.css",
+		"/C/Users/Tacio/Desktop/donotknow.html",
+		"/C/Users/Tacio/Desktop/estiloso.css",
+		"/C/Users/Tacio/Desktop/PROJETO/index.html",
+		"/C/Users/Tacio/Desktop/Linguagem C/Meu_primeiro_projeto/donotknow.html",
+		"/C/Users/Tacio/Desktop/Linguagem C/Meu_primeiro_projeto/tic-tac-toe-game.c",
 		"/C/Users/Tacio/Desktop/helloworld.c",
 		"/C/Users/Tacio/Desktop/TRABALHOS/Aplicacoes_para_Web/Projeto Final/Project - Loja de Brinquedos/css/design_descricao.css",
 		"/C/Users/Tacio/Desktop/principal.c",
@@ -120,7 +141,6 @@
 		"/C/Users/Tacio/Desktop/Project - Loja de Brinquedos/style.css",
 		"/C/Users/Tacio/Desktop/Project - Loja de Brinquedos/index.html",
 		"/C/Users/Tacio/Desktop/PROJETO/teste.html",
-		"/C/Users/Tacio/Desktop/PROJETO/index.html",
 		"/C/Users/Tacio/Desktop/PROJETO/estilo.css",
 		"/C/Users/Tacio/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Tacio/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
@@ -129,7 +149,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -143,6 +163,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"7",
 			"img",
 			"png",
 			"jpg",
@@ -174,29 +195,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/Tacio/Desktop/Linguagem C/Meu_primeiro_projeto/tic-tac-toe-game.c",
+					"file": "newtoy.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1894,
+						"buffer_size": 4941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								347,
-								347
+								2763,
+								2763
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1081.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -207,7 +227,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -244,7 +264,7 @@
 	"project": "index.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

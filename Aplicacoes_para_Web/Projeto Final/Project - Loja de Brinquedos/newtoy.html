@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/admin.css" />
+		<script type="text/javascript" src="validacaoForms.js"></script>
 	</head>
 	<body>
 		<div id="estrutura">
@@ -60,7 +61,7 @@
 			
 			<div id="conteudo">
 			<div class="espaco">
-			<form>
+			<form method="post" action="valida.php" name="form" onSubmit="validacao()">
 				<table id="newtoy">
 				
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
@@ -71,49 +72,49 @@
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Código:</td>
-					<td><input type="text" size="9"></td>
+					<td><input type="text" size="9" name="codigo"></td>
 					</tr>
 				
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Descrição:</td>
-					<td><input type="text" size="70"></td>
+					<td><input type="text" size="70" name="descricao"></td>
 					</tr>
 					
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Categoria:</td>
-					<td><input type="text" size="70"></td>
+					<td><input type="text" size="70" name="categoria" id="categoria" onChange="caps()"></td>
 					</tr>
 					
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Marca:</td>
-					<td><input type="text" size="70"></td>
+					<td><input type="text" size="70" name="marca"></td>
 					</tr>
 					
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Imagem(URL):</td>
-					<td><input type="text" size="70"></td>
+					<td><input type="text" size="70" name="imagem"></td>
 					</tr>
 					
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Preço:</td>
-					<td><input type="text" size="9"></td>
+					<td><input type="text" size="9" name="preco"></td>
 					</tr>
 					
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
 					<tr>
 					<td>Detahes:</td>
-					<td><textarea></textarea>
+					<td><textarea name="detalhes"></textarea>
 					</tr>
 					
 				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->	
 					<tr>
 					<td></td>
-					<td><input type="button" value="Gravar" onclick="alert('Produto Cadastrado!')"/></td>
+					<td><input type="submit" value="Gravar"/></td><!--troquei de button para submit -->
 					</tr>
 				</table>
 			</form>
