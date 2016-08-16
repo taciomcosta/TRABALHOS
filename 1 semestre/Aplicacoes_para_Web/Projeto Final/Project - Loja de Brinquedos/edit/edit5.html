@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Toy Store - Loja de Brinquedos</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/admin.css" />
+	</head>
+	<body>
+		<div id="estrutura">
+			<div id="topo">
+				<img src="../img/logo.jpg" alt="Logo da Toy Store" title="Logo da Toy Store" />
+			</div>
+			<div id="menu">
+				<ul id="menu-opcoes">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../catalogo_brinquedos.html">Catálogo de Brinquedos</a></li>
+					<li><a href="../admin.html" id="active">Administração</a></li>
+					<li><a href="../sobre.html">Sobre o Sistema</a></li>
+				</ul>
+				<ul id="menu-pesquisa">
+					<li><input type="search" id="search" placeholder="Digite o que quer encontrar" /></li>
+					<li><a href="#">Carrinho</a></li>
+					<li><a href="#">Minha Conta</a></li>
+				</ul>
+			</div>
+			
+			<div id="lateral">
+				<h2>Categorias</h2>
+				<div id="estrutura-lateral">
+				<div id="lateral-menu">
+				
+				<ul>
+					<li><a href="../categorias/brinquedos/brinquedos.html">Brinquedos</a></li>
+					<li><a href="../categorias/brinquedos/miniveiculos_cia.html">Mini Veículos & Cia</a></li>
+					<li><a href="../categorias/brinquedos/playgorund_layser.html">Playgrounds & Lazer</a></li>
+					<li><a href="../categorias/brinquedos/colecionaveis _hobby.html">Colecionáveis & Hobby</a></li>
+					<li><a href="../categorias/brinquedos/eletronicos.html">Eletrônicos</a></li>
+				</ul>
+				</div>
+				<div id="ofertas">
+					<h3>Quer saber sobre ofertas?</h3>
+					<table>
+						<tr>
+							<td>Nome:</td>
+							<td><input type="text" name="nome" id="nome" size="12" /></td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td><input type="email" name="email" id="email" size="12" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Enviar" /></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</div>
+			
+			<div id="conteudo">
+			<div class="espaco">
+			<form>
+				<table id="newtoy">
+				
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td colspan="2">Editar Brinquedo - Batman de Ferro</td>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Código:</td>
+					<td><input type="text" value=" 100119594 " size="9" disabled="disabled" ></td>
+					</tr>
+				
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Descrição:</td>
+					<td><input type="text" value=" Recrie a maior batalha de super-heróis de todos os tempos! Estas incríveis figuras de ação com aproximadamente 30 centímetros de altura e 9 pontos de articulação emitem luzes e sons como no filme. De um lado Batman está com sua armadura, pronto para fazer o Superman sangrar. Do outro, a visão de calor do Superman fará a batalha pergar fogo. " size="70"></td>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Categoria:</td>
+					<td><input type="text"  value=" Brinquedos " size="70"></td>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Marca:</td>
+					<td><input type="text" value=" Mattel " size="70"></td>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Imagem(URL):</td>
+					<td><input type="text"  value=" ../img/batman.jpg " size="70"></td>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Preço:</td>
+					<td><input type="text" value=" R$149,90 " size="9"></td>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->
+					<tr>
+					<td>Detahes:</td>
+					<td>
+					<textarea>
+Nome: Batman Vs Superman - A Origem da Justiça / Batman com Armadura
+Marca : Mattel
+Conteúdo da Embalagem: 1 figura articulada e acessórios
+Idade recomendada:	Para crianças a partir de 3 anos de idade.
+Tamanho: 30 centímetros de altura
+Fornecedor: Mattel
+					</textarea>
+					</tr>
+					
+				<!-- PRIMEIRA LINHA DE PRODUTOS - ADMINISTRAÇÃO -->	
+					<tr>
+					<td></td>
+					<td><input type="button" value="Gravar" onclick="alert('Produto Cadastrado!')"/></td>
+					</tr>
+				</table>
+			</form>
+				
+			</div>
+			</div>
+			
+			<div id="rodape">
+				<table>
+					<tr>
+						<td><img src="../img/logo.jpg" alt="Logo da Toy Store" title="Logo da Toy Store" /></td>
+						<td>
+							<h4>Institucional</h4>
+							<ul>
+								<li><a href="#">Sobre a Toy Store</a></li>
+								<li><a href="#">Trabalhe Conosco</a></li>
+								<li><a href="#">Política de Privacidade</a></li>
+								<li><a href="#">Promoções</a></li>
+							</ul>
+						</td>
+						<td>
+							<h4>Precisa de Ajuda?</h4>
+							<ul>
+								<li><a href="#">Central de Atendimento</a></li>
+								<li><a href="#">Envio e Entrega</a></li>
+								<li><a href="#">Sobre a Navegação</a></li>
+								<li><a href="#">Buscas Populares</a></li>
+							</ul>
+						</td>
+						<td id="social">
+							<h4>Redes Sociais</h4>
+							<ul>
+								<li>
+								<a href="#"><img src="../img/redesocial/facebook.png" alt="Facebook" title="Siga nos no Facebook" /></a> 
+								<a href="#"><img src="../img/redesocial/twitter.png" alt="Twitter" title="Siga nos no Twitter" /></a>
+								</li>
+							</ul>
+						</td>
+						<td>
+							<h4>Fale Conosco</h4>
+							<ul>
+								<li>(11)0000-0000 <br />(SP/RJ)</li>
+								<li>(11)0000-0000 <br />(Demais Localidades)</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
