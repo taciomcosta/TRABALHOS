@@ -1,2 +1,2 @@
-# Exercicios-e-trabalhos
-Exercicios e trabalhos (UNICID)
+# EXERCÍCIOS E TRABALHO (CC) - UNICID
+
