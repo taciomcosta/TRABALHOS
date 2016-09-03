@@ -1,0 +1,19 @@
+CREATE TABLE usuarios(
+ cod_usuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ nome_usuario VARCHAR(60),
+ email_usuario VARCHAR(60),
+ senha_usuario VARCHAR(16),
+ tipo_usuario INT
+ );
+
+------------------------------------------------------------------------------------------------
+
+CREATE TABLE tipoImovel(
+    -> cod_tipoImovel INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -> nome_tipoImovel VARCHAR(50),
+    -> situacao_tipoImovel BOOL
+    -> );
+
+-------------------------------------------------------------------------------------------------
+
+
