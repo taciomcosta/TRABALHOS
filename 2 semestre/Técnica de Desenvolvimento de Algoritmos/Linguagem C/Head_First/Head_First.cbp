@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Head_First" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Head_First" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Head_First" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Chapter 2 - What are you pointing at.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Chapter 2.5 - String theory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Chapter 3 - Creating Small Tools.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Chapter 4 - Using multiple source files.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Chapter 5 - Structs_Unions_and_Bitfields.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Chapter 6 - Data Structures and Dynamic Memory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Chapter 7 - Advanced Functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TODO.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cards.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="catalogChap5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="categorizeMainArgsChap3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dataTypeSizesChap4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="encrypt.h" />
+		<Unit filename="encryptChap4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fruitOrder_EnumsAndStructs_Chap5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="functionMatches.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="islandDynamicMemory_Chap6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="linkingIsland_Chap6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="message_hiderChap4" />
+		<Unit filename="message_hiderChap4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="orderingQsort_Chap7.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pizzaOrderCommandOptionsChap3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pointersToNavigate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="printReverseChap2.5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="searchToolChap2.5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="smallToolBermudaChap3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="smallToolCategorizeChap3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="smallToolGPSChap3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="structures.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="taxWaiter_dataTypesChap4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tracksChap2.5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="turtleStructswithPointerChap5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

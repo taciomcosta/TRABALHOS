@@ -1,0 +1,194 @@
+DECLARAÇÃO DE VARIÁVEIS DE PONTEIROS
+
+	int *contPtr;	-->		 Boa prática: incluir Ptr no nome de uma var de ponteiro;
+-----------------------------------------------------------------------------------
+
+OPERADORES DE PONTEIROS --> 	não pode ser aplicado a const, expressões, ou vars com register na declaração
+
+	& - --> retorna o endereço EX:
+
+		int y = 5;
+		int *yPtr;
+		yPtr = &y;  --> 	diz-se que yPtr "aponta" para y
+
+	* - --> retorna o valor do objeto para qual seu operando está apontando EX:
+		
+		printf("%d", *yPtr); --> imprimirá o valor da var y
+
+------------------------------------------------------------------------------------
+
+CHAMANDO FUNÇÕES POR REFERÊNCIA
+
+	-chamada:
+		 numero(&y);	-->  é passado o endereço como parâmetro
+	
+	-protótipo:
+		
+		void numero(int);
+	
+	-escopo:
+		
+		void numero(int *yPtr){...}
+
+
+	*ver funcaoValorReferencia
+
+------------------------------------------------------------------------------------
+
+QUALIFICADOR CONST COM PONTEIROS
+
+	- ponteiro constante --> só pode apontar para um único local EX:
+		int * const;
+	
+	- dado constante --> não pode ser modificadoEX:
+		char string [ ] = "imprime caracteres de uma string";
+
+
+	- Os 4 tipos de situações:
+
+		ponteiros e dados não constantes  
+			int *x, y; 
+			
+			
+		ponteiros e dados contstantes	
+			const int * const
+
+
+		ponteiros não constante e dado constate 
+			const char *s
+
+
+		ponteiro constante e dado não constate
+			int *const
+
+
+
+	PS: o nome de um array é um ponteiro constante para um dado não constante
+
+
+	*ver constantesPonteiro.c
+
+---------------------------------------------------------------------------------
+
+EXPRESSÕES E ARITMÉTICA DE PONTEIROS --> É utilizado somente por arrays, não há outra utilização
+
+	-Expressões EX:
+		vPtr++; se vPtr->v[0] então agora vPtr->v[1]
+
+	-Apontando para ponteiros
+
+		Ponteiros do mesmo tipo -->	 podem apontar um para outro
+		Ponteiros de tipos diferentes -->	 o ponteiro à direita na atribuição deve ser convertido
+		Ponteiros void -->	 não precisam ser convertidos em nenhuma situação
+
+	PS: Não é possível desreferenciar um ponteiro void *
+
+----------------------------------------------------------------------------------
+
+RELACIONAMENTO ENTRE PONTEIROS E ARRAYS 
+
+	bPtr = b = &b[0]
+	*(bPtr+3) = b[3]
+	bPtr+3 = &b[3]
+	
+	b[3] = *(b+3)
+	b[1] = bPtr[1]
+	
+	PS: A diferença é que b é um ponteiro constante, enquanto bPtr não é constante
+
+
+	*ver notacaoArray.c
+
+
+----------------------------------------------------------------------------------
+
+ARRAY DE PONTEIRO 
+	
+	Cada elemento é um ponteiro para o primeiro caractere de uma string
+
+	-inicializando
+		char *naipe[4] = {"Copas", "Ouros", "Paus", "Espadas"};
+
+	-Enviando o endereço de uma array de ponteiros para uma função:
+		funcao(naipe);
+
+	-Recebendo:
+		funcao (char** naipe) 
+			
+			OU	
+		
+		funcao (char *naipe[])
+
+
+
+	*ver distribuindoCartas.c
+
+-----------------------------------------------------------------------------------
+
+PONTEIROS PARA FUNÇÕES --> contém o endereço da função na memória
+
+	- É utilizado quando não se sabe qual função será utilizada
+
+	-Nome da função --> Pode ser utilizado para indicar o endereço, similar a uma array.
+
+
+	-Enviando o endereço de uma função:
+		funcao2 (funcao1);
+
+
+	-Recebendo o endereço de uma função:
+		void funcao2 (int (*nomePonteiro) (tipos de parametros da func1)){...} EX:
+		void bolha (int (*compare) (int,int)){...}
+
+
+	-Usando a função recebida
+
+		(*compare)(x,y);
+
+			OU
+
+		compare(x,y);
+
+	*ver ponteiroParaFuncao.c
+
+-----------------------------------------------------------------------------------------
+
+ARRAY DE PONTEIRO DE FUNÇÃO
+
+	-inicializando:
+
+		Tendo 3 funções qualquer:
+			void funcaol(int);
+			void funcao2(int);
+			void funcao3(int);
+
+
+		Podemos ter a array de ponteiro de função. EX:
+
+			void (*f[3]) (int) = {funcao1, funcao2, funcao 3}; --> f é um array de 3 ponteiros para funções que utilizam um int como 											argumento e retornam void
+
+		-Chamando a opção:
+			(*f[i]) (x);
+
+	PS: Essa estrutura é muito utilizada em menus, por exemplo.
+
+
+	*ver aritmetica.c --> eu que fiz, que emoção!
+
+------------------------------------------------------------------------------------------
+
+
+
+		
+
+	
+
+
+	
+	
+
+
+		
+	
+
+	

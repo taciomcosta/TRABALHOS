@@ -1,0 +1,67 @@
+DECLARAÇÃO DE UMA ARRAY: 
+
+TIPO NOME [TAMANHO SUBSCRITO];
+
+	OU
+
+TIPO NOME[n] = {V1, V2, V3, ..., Vn};
+
+	OU
+
+TIPO NOME[] = {V1, V2, V3, ..., Vn};	--> constante???
+
+------------------------------------------------------------------
+
+CONSTANTE SIMBÓLICA
+
+#define NOME VALOR --> substitui a palavra NOME pelo VALOR
+	-EX: #define TAMANHO 10		<-- não tem ';' , pois é uma diretiva
+		int s[TAMANHO];
+
+------------------------------------------------------------------
+
+*ver votacaoEstudantil.c
+*ver histograma.cr
+------------------------------------------------------------------
+
+ARRAY DE CARACTERES
+
+	-inicializando:
+		 char string1[] = "primeiro";
+		 char string2[20];    <-- não esqueça de incluir o caractere nulo '\0'.
+	
+	-lendo:
+		scanf("%s", string2);
+
+	-PASSANDO ARRAY PARA FUNÇÕES
+		POR VALOR: void modificaArray(int); 			chamada-->modificaArray(array ou array[x]);
+		POR REFERÊNCIA: void modificaArray(int []);             chamada-->modificaArray(array ou array[x]);
+
+--------------------------------------------------------------------
+
+CONSTANTES 	-> não podem ser modificadas por nenhum tipo de instrução
+
+	-inicializando:
+		const int [x];
+
+	-passando como parâmetro:
+		tentaModificarArray(const int []);
+
+--------------------------------------------------------------------
+
+ORDENANDO DADOS
+
+	Bubble Sort: *ver bubbleSort.c
+
+
+-------------------------------------------------------------------
+ARRAYS BIDIMENSIONAIS:
+	
+	-inicializando:
+		int b[2][2] = {{1, 2}, {3, 4}};
+
+
+
+
+
+

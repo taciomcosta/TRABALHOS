@@ -1,0 +1,111 @@
+# depslib dependency file v1.0
+1466024023 source:c:\users\tacio\desktop\linguagem c\head_first\main.c
+	<stdlib.h>
+
+1465826611 source:c:\users\tacio\desktop\linguagem c\head_first\cards.c
+	<stdio.h>
+	<stdlib.h>
+
+1465925705 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 2 - what are you pointing at.c
+
+1465817594 source:c:\users\tacio\desktop\linguagem c\head_first\functions.c
+
+1465819527 source:c:\users\tacio\desktop\linguagem c\head_first\structures.c
+
+1465926888 source:c:\users\tacio\desktop\linguagem c\head_first\pointerstonavigate.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+
+1466715633 source:c:\users\tacio\desktop\linguagem c\head_first\todo.c
+	<stdlib.h>
+	<string.h>
+	<stdlib.h>
+	<string.h>
+
+1466017311 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 3 - string theory.c
+
+1466015004 source:c:\users\tacio\desktop\linguagem c\head_first\trackschap3.c
+	<string.h>
+
+1466024008 source:c:\users\tacio\desktop\linguagem c\head_first\printreversecahp3.c
+	<stdlib.h>
+	<string.h>
+
+1466017311 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 2.5 - string theory.c
+
+1466024008 source:c:\users\tacio\desktop\linguagem c\head_first\printreversechap2.5.c
+	<stdlib.h>
+	<string.h>
+
+1466015004 source:c:\users\tacio\desktop\linguagem c\head_first\trackschap2.5.c
+	<string.h>
+
+1466354714 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 3 - creating small tools.c
+
+1466294005 source:c:\users\tacio\desktop\linguagem c\head_first\smalltoolgpschap3.c
+
+1466293923 source:c:\users\tacio\desktop\linguagem c\head_first\smalltoolbermudachap3.c
+
+1466293904 source:c:\users\tacio\desktop\linguagem c\head_first\smalltoolcategorizechap3.c
+	<stdlib.h>
+	<string.h>
+
+1466349640 source:c:\users\tacio\desktop\linguagem c\head_first\categorizemainargschap3.c
+	<stdlib.h>
+	<string.h>
+
+1466345535 source:c:\users\tacio\desktop\linguagem c\head_first\searchtoolchap2.5.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1466514499 source:c:\users\tacio\desktop\linguagem c\head_first\pizzaordercommandoptionschap3.c
+	<unistd.h>
+
+1466449087 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 4 - using multiple source files.c
+	<limits.h>
+	<float.h>
+
+1466429193 source:c:\users\tacio\desktop\linguagem c\head_first\taxwaiter_datatypeschap4.c
+	<stdio.h>
+
+1466612027 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 5 - structs_unions_and_bitfields.c
+
+1466429924 source:c:\users\tacio\desktop\linguagem c\head_first\datatypesizeschap4.c
+	<stdio.h>
+	<limits.h>
+	<float.h>
+
+1466527948 source:c:\users\tacio\desktop\linguagem c\head_first\encryptchap4.c
+	"encrypt.h"
+
+1466516691 c:\users\tacio\desktop\linguagem c\head_first\encrypt.h
+
+1466528266 source:c:\users\tacio\desktop\linguagem c\head_first\catalogchap5.c
+
+1466627647 source:c:\users\tacio\desktop\linguagem c\head_first\turtlestructswithpointerchap5.c
+
+1466533222 source:c:\users\tacio\desktop\linguagem c\head_first\message_hiderchap4.c
+	"encrypt.h"
+
+1466608356 source:c:\users\tacio\desktop\linguagem c\head_first\fruitorder_enumsandstructs_chap5.c
+
+1466694501 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 6 - data structures and dynamic memory.c
+
+1466631645 source:c:\users\tacio\desktop\linguagem c\head_first\linkingisland_chap6.c
+	<stdlib.h>
+
+1466692850 source:c:\users\tacio\desktop\linguagem c\head_first\islanddynamicmemory_chap6.c
+	<stdlib.h>
+	<string.h>
+
+1466715651 source:c:\users\tacio\desktop\linguagem c\head_first\chapter 7 - advanced functions.c
+
+1466705270 source:c:\users\tacio\desktop\linguagem c\head_first\functionmatches.c
+
+1466706029 source:c:\users\tacio\desktop\linguagem c\head_first\orderingqsort_chap7.c
+	<string.h>
+	<stdlib.h>
+

@@ -1,0 +1,11 @@
+message.o: message_hiderChap4.c encrypt.c encrypt.h
+	gcc -c message_hiderChap4.c
+
+encrypt.o: encrypt.c encrypt.h
+	gcc -c encryptChap4.c
+
+launch.o: message.o encrypt.o
+	gcc -c launch.c
+
+launch: launch.c
+	gcc launch.o -o launch

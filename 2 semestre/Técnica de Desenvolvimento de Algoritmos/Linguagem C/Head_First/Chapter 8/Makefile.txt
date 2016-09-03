@@ -1,0 +1,11 @@
+hfcal.o: hfcal.c hfcal.h
+	gcc -c hfcal.c -o hfcal.o
+
+elliptical.o: elliptical.c hfcal.h
+	gcc -c elliptical.c -o elliptical.o
+
+hfcal.a: hfcal.o
+	ar -rcs libhfcal.a hfcal.o
+
+elliptical: elliptical.o libhfcal.a
+	gcc elliptical.o -L./. -lhfcal -o elliptical

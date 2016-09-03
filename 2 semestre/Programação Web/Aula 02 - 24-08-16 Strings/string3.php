@@ -1,0 +1,13 @@
+<?php
+//Funções de manipulação de Strings
+/*
+trim(); -> remove espaços em branco
+strlen(); -> tamanho da string
+*/
+
+
+$universidade = '   Unicid   ';
+$universidade = trim($universidade);
+echo 'O tamanho da var $universidade é ' . strlen($universidade);	
+
+?>

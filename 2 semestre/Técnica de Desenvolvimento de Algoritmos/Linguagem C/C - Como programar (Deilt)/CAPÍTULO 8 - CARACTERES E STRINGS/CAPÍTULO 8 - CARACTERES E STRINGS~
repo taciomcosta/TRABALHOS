@@ -1,0 +1,89 @@
+Conceitos Fundamentais de Strings
+
+	-inicializando:
+		char cor[] = "azul"; --> 	Contém 5 caracteres: a-z-u-l-\0
+
+			OU
+
+		char *corPtr = "azul"; --> 	Algumas vezes, pode ser uma constante, i.e., não poderá ser modificada
+
+
+	-lendo:
+		scanf("%s", word);
+
+--------------------------------------------------------------------------------------
+
+BIBLIOTECA DE MANIPULAÇÃO DE CARACTERES: <ctype.h>
+
+	-Algumas funções:
+		isdigit(c)	isalpha(c)	isalnum(c)	isxdigit(c)
+		islower(c)	isupper(c)	tolower(c)	toupper(c)
+		isspace(c)	iscntrl(c)	ispunct(c)	isprint(c)
+		isgraph(c)
+	
+	*ver pg. 372 do pdf
+
+---------------------------------------------------------------------------------------
+
+CONVERSÃO DE STRING --> <stdlib.h>
+
+	-Algumas funções:
+		atoi("99") --> arg para int
+		atof("99") --> arg para float
+		atol("99") --> arg para long int
+		
+		double x = strtod(string,&strPtr) --> string para double
+		long x = strtol(string,&strPtr,0) --> string para long int na base 10
+		unsigned long x = strtoul(string, &remainderPtr, 0); --> string para unsigned long int na base 10
+
+
+	*ver conversaoString.c
+
+----------------------------------------------------------------------------------------
+
+FUNÇÕES DA BIBLIOTECA I/O --> <stdio.h>
+
+	
+	Algumas funções:
+		getchar()	fgets(s,TAMANHO,stdin)		putchar(c)	puts(*s)
+		sprintf(*s)	sscanf(*s)
+	
+	*ver funcoesIO.c
+
+----------------------------------------------------------------------------------------
+
+MANIPULAÇÃO DE STRINGS com <string.h>
+
+
+	-Funções de cópia:
+		strcpy(s1,s2)	strncpy(s1,s2,n)	strcat(s1,s2)	strncat(s1,s2,n)
+
+	
+	-Funções de comparação:
+		*strcmp(s1,s2)	*strncmp(s1,s2,n)
+
+	-Funções de pesquisa:
+		strchr(s,c)	*strcspn(s1,s2)		*strspn(s1,s2)
+		strbrk(s1,s2)	strstr(s1,s2)		strtok(s1,s2)
+
+
+	-Funções de Memória:	--> são para ponteiros, mas funcionam para strings também
+		memcpy(s1,s2,TAMANHO)	memmove(s1,s2,TAMANHO)
+		*memcmp(s1,s2,TAMANHO)	memchr(s,c,TAMANHO)
+		memset(s,c,TAMANHO)
+
+	-Outras funções:
+		strerror(num)	strlen(s)
+
+
+
+
+		
+
+	PS: As funções que contém * retornam um valor numérico, retire o *
+	
+
+	*ver manipulacaoString.c
+
+		
+

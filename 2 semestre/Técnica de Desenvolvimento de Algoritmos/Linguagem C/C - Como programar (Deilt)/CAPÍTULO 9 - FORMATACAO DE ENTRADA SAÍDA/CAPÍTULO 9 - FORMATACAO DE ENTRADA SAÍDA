@@ -1,0 +1,82 @@
+
+FLUXOS -->	 sequências de caracteres organizados em linhas
+
+	-Os 3 fluxos:
+		entrada
+		saída
+		erro 
+
+---------------------------------------------------------------------------------
+
+ESPECIFICADORES DE CONVERSÃO
+
+	
+	-de inteiros
+		%d --> int decimal
+		%i --> int com sinal
+		%o --> octal
+		%x ou %X --> hexadecimal
+		%h ou %l --> short ou long
+
+
+	-de ponto flutuante
+		%e ou %e --> valor em notação exponencial
+		%f --> qualquer valor de ponto flutuante
+		%g ou %G --> Valor de ponto flutuante normal e em forma exponencial
+		%L --> Long Double
+
+
+	-de strings
+		%c --> char
+		%s --> string
+
+
+	-outros
+		%p --> endereço de ponteiro
+		%n --> numero de chars já enviados ao dispositivo de saída (usa-se um 'int *' como arg correspondente)
+		%% --> Imprime '%'
+
+
+	*ver exemplos.c
+
+
+-----------------------------------------------------------------------------------
+
+IMPRIMINDO COM LARGURAS DE CAMPOS E PRECISÕES
+
+		-Largura de campos:
+			printf("%4d",232);	--> vai ser alinhado à direita
+
+		
+		-Precisão:
+			printf("%9.3f", 123.456789);
+
+------------------------------------------------------------------------------------
+
+SINALIZADORES (FLAGS) NA STRING DE CONTROLE
+
+	- --> alinha a saída a esquerda
+	+ --> exibe o sinal de positivo/negativo
+	# --> coloca 0 (para octal) e 0x (para hexadecimal)
+	0 --> preenche com 0s iniciais
+
+------------------------------------------------------------------------------------
+
+SEQUÊNCIAS DE ESCAPE
+
+	\' 	\"	\?	\\	\a	\b
+	\f	\n	\r	\t	\v
+
+------------------------------------------------------------------------------------
+
+FORMATAÇÃO DE ENTRADA COM SCANF
+
+	
+	-Conjunto de varredura
+		scanf("%[aeiou]", z); --> só ira ler os caracteres 'a','e','i','o','u', os outros serão ignorados
+
+	-Caractere de supressão de atribuição:
+		scanf("%i*%i*%i",&mes,&dia,&ano);
+
+
+

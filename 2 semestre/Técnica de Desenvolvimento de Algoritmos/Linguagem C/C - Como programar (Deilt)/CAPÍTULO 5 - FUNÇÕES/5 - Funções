@@ -1,0 +1,74 @@
+As funções da biblioteca matemática (<math.h>) retornam o tipo de dado double.
+
+-Algumas funções da <math.h>
+	sqrt(x)	exp(x)	log(x)
+	log10(x) fabs(x) ceil(x)
+	floor (x) pow(x,y) fmod(x,y)
+	sin(x) cos(x) tan(x)
+
+---------------------------------------------------------------------------------------------------
+-Exemplo de função definida depois da função main():
+
+/* Funcao square definida pelo programador */
+#include <stdio.h>
+
+int square(int);	<-- Esta linha diz ao compilador que(quais) tipo(s) de dado(s) a função retornará (receberá)
+
+/* protótipo da funcao */
+main() {
+
+	int x;
+	for (x = 1; x <= 10; x++)
+	printf("%d ", square(x));
+	return 0;
+
+}
+
+/* Definição da funcao */
+int square(int y){
+
+	y = y*y;
+	return y;
+
+}
+
+---------------------------------------------------------------------------------------------------
+
+Geração de números aleatórios com a função rand()
+
+*ver numerosAleatorios.c
+*ver craps.c
+*ver megasena.c  <-- esse eu que fiz
+
+
+Função time()
+-#include <time.h>
+-retorna a hora atual do dia em segundos
+-time(NULL) só retorna o tempo em formato de unsigned int, não retorna a string. 
+
+---------------------------------------------------------------------------------------------------
+
+Classes de armazenamento
+
+-Tempo de armazenamento
+
+	dinâmico/automático:
+		auto float x, y; <-- declara que a váriavel será de tempo automática, i.e., será destruída depois que a função finalizar
+		register int contador = 1; <-- insere a váriavel em um registrador para funcionar como contador
+
+	estático:
+		static int contagem =1; <-- utilizada em vars locais, não destrói o valor da variável quando a função é finalizada
+		extern <- não possui exemplo
+
+-----------------------------------------------------------------------------------------------------
+
+Função Recursiva
+- Chama a si mesma
+*ver funcaoRecursiva.c
+	
+	
+	
+		
+ 
+
+

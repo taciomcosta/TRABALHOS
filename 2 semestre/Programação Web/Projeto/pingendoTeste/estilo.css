@@ -1,0 +1,99 @@
+/*MEU ESTILO PESSOAL*/
+
+
+/*MENUPRINCIPAL*/
+#logostyle{
+	padding:0;
+	margin:0;	
+}
+
+#logo{
+	height:34px;	
+}
+
+#login input, button{
+  margin:10px 10px 0;
+}
+
+.formPrincipal{
+
+	margin-left:50px;
+}
+
+/* Entrar */
+.entrar h4{
+	text-align:center
+}
+
+/* Formulário de pesquisa */
+
+#formPesquisa{
+	
+	margin:5px 0 0 0;
+
+}
+
+#formPesquisa input{
+	max-width:400px;
+	margin-left:50px;
+}
+
+#formPesquisa button{
+	background:#19162e;
+	border:0;
+	padding:2px; 
+	margin:5px;
+	height:30px;
+}
+
+#formPesquisa img{
+	height:25px;
+}
+
+/* Início */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+
+	height:700px;
+}
+/*Menu lateral*/
+
+/*.ctMenuLateral{
+	margin-left:0;
+	padding:0 15px;
+}*/
+
+.menuLateral{
+	margin:50px 0 0 0;
+}
+
+/*Sessão de resultados*/
+#destaque{
+	margin-top:50px;
+	padding-left:5px;
+}
+
+.resultado{
+	border-top:1px dashed #000;
+	margin-bottom:10px;
+	padding-top:10px;
+	float:right;
+}
+
+.resultado img{
+	width:200px;
+	height:200px;
+	float:left;
+	/*imgpes não lembro para o quê*/
+}
+
+/*Rodapé*/
+
+.rodape{
+	background:#19162e;
+	color:white;
+}

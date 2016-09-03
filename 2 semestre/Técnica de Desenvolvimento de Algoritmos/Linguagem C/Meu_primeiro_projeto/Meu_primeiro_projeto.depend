@@ -1,0 +1,127 @@
+# depslib dependency file v1.0
+1456698036 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\main.c
+	<stdio.h>
+
+1456699884 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\variaveis_aula_7.c
+	<stdio.h>
+
+1456698504 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\helloworld.c
+	<stdio.h>
+
+1456700417 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\valoresformatados.c
+	<stdio.h>
+
+1456735195 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\operacoesmatematicas_aula11.c
+	<stdio.h>
+	<stdlib.h>
+
+1456736103 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\entrada_de_dados_aula12.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1456735951 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmoconjuntosnumericos.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1458579989 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmocalculadora.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1456737880 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\escapesequence_aula14.c
+	<stdio.h>
+	<stdlib.h>
+
+1456740587 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\instrucaoif.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<ctype.h>
+
+1456739038 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\operadoreslogicos_aula17.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1456740503 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\medianotas.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1456748956 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmoconjuntos.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1458405210 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmofuncoes.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1458515750 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmoraiz_funcao1grau.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1458426614 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmo_fahrtocel.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1458570614 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\exemplofor.c
+	<stdio.h>
+	<locale.h>
+
+1459001180 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\conversorbinario.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1459001115 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\algoritmo_funcaoquadratica.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1462058399 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\somabinario.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1464812540 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\treino.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1464535808 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\operadoreslogicos_a19.c
+	<stdio.h>
+	<stdlib.h>
+
+1464535997 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\modificadoresdetipo_a21.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1464815186 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\charstring.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+
+1464814598 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\funcoes.c
+
+1464900793 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\pesoideal.c
+	<stdlib.h>
+	<locale.h>
+
+1464996938 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\tip-toe-game.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1465084703 source:c:\users\tacio\desktop\linguagem c\meu_primeiro_projeto\tic-tac-toe-game.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
