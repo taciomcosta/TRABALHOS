@@ -19,7 +19,7 @@
 
                     <div class="form-group">
 
-                        <input type="text" class="form-control fa fa-search" placeholder="Pesquise por local ou tipo de imóvel">
+                        <input type="text" class="form-control fa fa-search" placeholder="Pesquise por local, tipo ou código do imóvel">
                         <button type="submit" class="btn btn-default hidden-xs" value="Pesquisar">
                             <img src="imgs/lupa.png">
                         </button>
@@ -36,7 +36,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Entrar&nbsp;<i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <form class="navbar-form navbar-left" role="search" name="login" id="login" method="post">
+                                    <form class="navbar-form navbar-left" role="search" name="login" id="login" method="post" action="verificaLogin.php">
                                         <div class="form-group entrar">
                                             <h4>Entre ou
                                                 <a href="cadastroUsuario.php">Cadastre-se</a>
@@ -70,10 +70,10 @@
                             </ul>
                         </li>
                         <li class="menuPrincipal botoesmenup">
-                            <a href="#">Quem Somos<br></a>
+                            <a href="quemSomos.php">Quem Somos<br></a>
                         </li>
                         <li class="menuPrincipal">
-                            <a href="#">Contato<br></a>
+                            <a href="contato.php">Contato<br></a>
                         </li>
                     </ul>
 

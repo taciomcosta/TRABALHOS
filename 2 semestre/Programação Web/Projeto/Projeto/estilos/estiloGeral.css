@@ -1,6 +1,8 @@
 /*MEU ESTILO PESSOAL*/
 
 
+
+
 /*MENUPRINCIPAL*/
 #logostyle{
 	padding:0;
@@ -34,9 +36,10 @@
 }
 
 #formPesquisa input{
-	max-width:400px;
-	margin-left:50px;
+	min-width:400px;
+	margin-left:40px;
 }
+
 
 #formPesquisa button{
 	background:#19162e;
@@ -55,6 +58,7 @@
 	background:#19162e;
 	color:white;
 	margin-top:100px;
+
 }
 
 .rodape #copyright{

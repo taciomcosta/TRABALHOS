@@ -3,7 +3,7 @@
 
             <div class="container">
 
-                <div class="row">
+                <div class="row" >
 
                 <!-- Visite a Empire Estate -->
                     <div class="col-sm-4">
@@ -33,7 +33,7 @@
                                 <a href="http://www.facebook.com"><i class="fa fa-2x fa-fw fa-facebook text-inverse"></i></a>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" >
                             <div class="col-md-12 hidden-xs text-right">
                                 <a href="http://www.instagram.com"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
                                 <a href="http://www.twitter.com"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>

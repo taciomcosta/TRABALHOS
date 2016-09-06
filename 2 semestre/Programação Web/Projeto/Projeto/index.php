@@ -51,7 +51,7 @@
         </div><!-- Carousel -->
 
         <!-- MENU LATERAL -->
-        <div class="section" >
+        <div class="section">
 
             <div class="container ctMenuLateral">
 
@@ -121,11 +121,10 @@
             </div><!-- container -->
         </div><!-- section -->
 
+        
         <!-- Importando o rodape  -->
-        <?php
-            include_once("rodape.php");
-        ?>
-    
+        <?php include_once("rodape.php"); ?>
 
-</body>
+       
+    </body>
 </html>

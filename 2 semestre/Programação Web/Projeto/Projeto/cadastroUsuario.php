@@ -29,7 +29,7 @@
         
                 <!-- Linha Cabeçalho -->
                 <div class="row" >
-                <div id="colCabecalho"class="col-md-8" style="">
+                <div id="colCabecalho" class="col-md-8" style="">
                     <h2>Crie sua conta</h2>
                     <p>Cadastre-se abaixo para receber informações das melhores oportunidades
                     de compra, locação e venda de imóveis.</p>
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div id="colFormCadastro" class="col-md-4">
 
-                        <form name="formUsuarioComum" role="form" method="POST" action="gravaUsuario.php">
+                        <form name="formUsuarioComum" role="form" method="POST" action="gravaUsuario.php" onSubmit="return validaUsuarioComum();">
 
                             <div class="form-group">
                                 <label class="control-label">Nome</label>
@@ -51,26 +51,24 @@
                                 <input name="email" class="form-control" id="exampleInputEmail1" type="email" required>
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="exampleInputPassword1">Senha (Máximo 16 caracteres)</label>
-                                <input name="senha" class="form-control" id="exampleInputPassword1" type="password" maxlength="16" minlength="5" required>
+                                <label class="control-label" for="senha">Senha (Máximo 16 caracteres)</label>
+                                <input name="senha" id="senha" class="form-control" id="exampleInputPassword1" type="password" maxlength="16" minlength="5" required>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Confirme a senha</label>
-                                <input name="confirmeSenha" class="form-control" type="password" max="16" min="5" required>
+                                <label class="control-label" for="confirmesenha">Confirme a senha</label>
+                                <input name="confirmeSenha" id="confirmesenha" class="form-control" type="password" maxlength="16" minlength="5" required>
                             </div>
-                                <button type="submit" class="btn btn-primary" onClick="validaUsuarioComum()">
-                                Cadastrar
-                                </button>
+                                <input type="submit" class="btn btn-primary" value="Cadastrar">
 
                         </form>
 
-                    </div><!-- fim da row -->
+                    </div><!-- fim da colFormCadastro -->
         
-                </div>
+                </div><!-- fim da row -->
         
             </div><!-- Fim Container -->
     
-        </div><!-- Fim seção sForm -->
+        </div><!-- Fim seção sForm --> 
     
     
         <!-- Importando o rodape  -->

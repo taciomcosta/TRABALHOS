@@ -12,7 +12,7 @@
 	include_once("conexao.php");
 
 	//Inserindo dados
-	$query = "INSERT INTO usuarios VALUES (NULL, '$nome', '$email', '$senha', 3)";
+	$query = "INSERT INTO usuarios VALUES (NULL, '$nome', '$email', '$senha', 3, 1)";
 
 	$sql = mysqli_query($conn,$query) or die("Erro ao gravar");
 

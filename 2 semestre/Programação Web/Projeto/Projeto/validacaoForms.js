@@ -1,13 +1,30 @@
 function validaUsuarioComum(){
 	
-	if( document.formUsuarioComum.senha.value != document.formUsuarioComum.confirmeSenha.value )
+	if( document.getElementById('senha').value == document.getElementById('confirmesenha').value )
 	{
-		alert('Senhas nÃ£o conferem!');
-		return false;
+		
+		return true;
 	}
 	else
 	{
-		return true;
+		alert('Senhas não conferem!');
+		return false;
 	}
 	
+}
+
+
+// Funções para abrir e fechar os modals
+function fechar(){
+
+            document.getElementById("modal").style.display = "none";
+
+}
+
+
+function abrir(){
+
+	if( document.referrer == "http://localhost/Projeto/enviaContato.php")
+		document.getElementById("modal").style.display = "block";
+
 }
