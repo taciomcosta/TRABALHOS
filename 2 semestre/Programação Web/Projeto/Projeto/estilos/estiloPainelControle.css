@@ -33,6 +33,11 @@ margin:90px 0 auto auto
             display: none;
         }
 
+        .aba
+        {
+            margin:0 auto;
+        }
+
         /*une os elementos irmãos*/
         /*'Esconde' a div não selecionada */
         input.tabs + label + div {
@@ -83,11 +88,12 @@ margin:90px 0 auto auto
 
 		#sForm .row{
 
-			margin-bottom:5%;
+			
+            
 
 		}
 
-		#sForm #colCabecalho, #colFormCadastro{
+		#sForm #colCabecalho, #colFormCadastro,#colFormPesquisa{
 
 			margin:0 auto;float:none;
 

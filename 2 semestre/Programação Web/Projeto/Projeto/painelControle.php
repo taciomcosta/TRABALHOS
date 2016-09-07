@@ -33,7 +33,7 @@
         <!-- style para o rodapé preencer o final da página -->
         <div class="row" style="height:400px;">
 
-          <a href="pcImoveis.php">
+          <a href="pcImovel.php">
           <div class="col-md-4">
             <img src="imgs/casa.png" class="center-block img-circle img-responsive">
             <h3 class="text-center"><a href="#" id="imoveis">Imóveis</a></h3>

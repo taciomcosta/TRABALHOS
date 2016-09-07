@@ -11,9 +11,11 @@
 
 }
 
-#sForm #colCabecalho, #colFormCadastro{
+#sForm #colCabecalho, #colFormCadastro, #colFormPesquisa{
 
 	margin:0 auto;float:none;
 
 }
+
+
 

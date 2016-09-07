@@ -48,7 +48,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="exampleInputEmail1">Email</label>
-                                <input name="email" class="form-control" id="exampleInputEmail1" type="email" required>
+                                <input name="email" class="form-control" id="exampleInputEmail1" type="email" maxlength="60"required>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="senha">Senha (Máximo 16 caracteres)</label>
