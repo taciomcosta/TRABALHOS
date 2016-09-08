@@ -1,0 +1,35 @@
+//Indicando a pasta
+package aula2_06_09_16;
+
+//Importando Scanner
+import java.util.Scanner;
+
+public class Treino2{
+	
+	public static void main(String[] args)
+	{
+		
+//		Instanciando Scanner
+		Scanner ent = new Scanner(System.in);
+		
+//		Entradas
+		System.out.print("Insira o coeficiente A: ");
+		double a = ent.nextDouble();
+		
+		System.out.print("Insira o coeficiente B: ");
+		double b = ent.nextDouble();
+		
+		System.out.print("Insira o coeficiente C: ");
+		double c = ent.nextDouble();
+		
+//		Processamento
+		double delta = Math.pow(b, 2) - (4 * a * c);
+		double x1 = (-b - Math.sqrt(delta) ) / 2 * a;
+		double x2 = (-b + Math.sqrt(delta) ) / 2 * a;
+		
+//		Saída
+		System.out.printf("x1 = %.2f \n x2 = %.2f", x1,x2);
+		
+		
+	}
+}
