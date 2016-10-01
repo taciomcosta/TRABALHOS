@@ -14,11 +14,47 @@ CREATE TABLE usuarios(
 ------------------------------------------------------------------------------------------------
 
 CREATE TABLE tipoImovel(
-    -> cod_tipoImovel INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    -> nome_tipoImovel VARCHAR(50),
-    -> situacao_tipoImovel BOOL
-    -> );
+cod_tipoImovel INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome_tipoImovel VARCHAR(50),
+categoria_tipoImovel VARCHAR(15),
+situacao_tipoImovel BOOL
+);
 
 -------------------------------------------------------------------------------------------------
 
+CREATE TABLE tipoImovel(
+cod_tipoImovel INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome_tipoImovel VARCHAR(30),
+situacao_tipoImovel BOOL
+);
 
+-------------------------------------------------------------------------------------------------
+
+CREATE TABLE imoveis(
+cod_imovel INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+cod_usuario INT,
+cod_tipoImovel INT,
+titulo_imovel VARCHAR(80),
+tipoNegocio_Imovel VARCHAR(30),
+valor_imovel VARCHAR(20),
+cidade_imovel VARCHAR(40),
+uf_imovel CHAR(2),
+logradouro_imovel VARCHAR(10),
+endereco_imovel VARCHAR(50),
+numero_imovel INT,
+complemento_imovel VARCHAR(50),
+bairro_imovel VARCHAR(50),
+areaTotal_imovel VARCHAR(10),
+areaUtil_imovel VARCHAR(10),
+dormitorios_imovel INT,
+banheiros_imovel INT,
+garagem_imovel INT,
+descricacao VARCHAR(500),
+situacao_imovel BOOL,
+
+CONSTRAINT fk_cod_usuario FOREIGN KEY (cod_usuario) REFERENCES usuarios(cod_usuario),
+CONSTRAINT fk_cod_tipoImovel FOREIGN KEY (cod_tipoImovel) REFERENCES tipoImovel(cod_tipoImovel)
+
+)ENGINE = InnoDB;
+
+-------------------------------------------------------------------------------------------------

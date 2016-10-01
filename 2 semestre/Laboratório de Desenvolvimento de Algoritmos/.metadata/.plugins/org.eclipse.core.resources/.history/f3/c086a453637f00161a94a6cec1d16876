@@ -1,0 +1,21 @@
+//Importando Scanner
+import java.util.Scanner;
+
+
+public class Ex23 {
+
+	public static void main(String[] args){
+		
+	//Instanciando Scanner
+	Scanner ent = new Scanner(System.in);
+	
+	//vars
+	int angulo1, angulo2, angulo3;
+	
+	
+	System.out.println("Medida do 3° ângulo de um triângulo\n\n");
+	
+	//Entradas	
+		
+	}
+}

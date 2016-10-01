@@ -1,0 +1,20 @@
+//Importando Scanner
+import java.util.Scanner;
+
+public class Ex19 {
+	
+	public static void main(String[] args)
+	{
+	//	Instanciando Scanner
+	Scanner input = new Scanner(System.in);
+	
+	//vars
+	
+	
+	System.out.println("\n\n");
+	
+	//Entrada	
+		
+	}
+
+}

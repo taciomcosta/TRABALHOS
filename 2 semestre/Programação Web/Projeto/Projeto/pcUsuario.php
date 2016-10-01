@@ -17,7 +17,7 @@
             
         </style>
     </head> 
-    <body">
+    <body>
 
         <!-- Importando o Menu Principal  -->
         <?php
@@ -74,7 +74,7 @@
                                     <form name="formUsuarioComum" role="form" method="POST" action="gravaUsuario.php" onSubmit="return validaUsuarioComum();">
                                         <div class="form-group">
                                             <label class="control-label">Nome</label>
-                                            <input name="nome" class="form-control" type="text" required>
+                                            <input name="nome" class="form-control" type="text" maxlength="60"required>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label" for="email">Email</label>

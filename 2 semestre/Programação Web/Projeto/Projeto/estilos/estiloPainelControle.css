@@ -29,7 +29,7 @@ margin:90px 0 auto auto
          
         /* ABAS */
         input.tabs {
-            /*Esconde os bot√µes do radio*/
+            /*Esconde os botıes do radio*/
             display: none;
         }
 
@@ -38,8 +38,8 @@ margin:90px 0 auto auto
             margin:0 auto;
         }
 
-        /*une os elementos irm√£os*/
-        /*'Esconde' a div n√£o selecionada */
+        /*une os elementos irm„os*/
+        /*'Esconde' a div n„o selecionada */
         input.tabs + label + div {
             width: 98%;
             opacity: 0;
@@ -52,7 +52,7 @@ margin:90px 0 auto auto
             z-index: -1;
             transition: opacity ease-in-out .3s;
         }
-        /*Sobrep√µe a div selecionada*/
+        /*Sobrepıe a div selecionada*/
         input.tabs:checked + label + div {
             opacity: 1;
             z-index: 1000;
@@ -60,7 +60,7 @@ margin:90px 0 auto auto
          
         /* Labels */
 
-        /*Quando a label N√ÉO est√° selecionada*/
+        /*Quando a label n„o est· selecionada*/
         input.tabs + label {
             line-height: 40px;
             padding: 0 20px;
@@ -72,34 +72,28 @@ margin:90px 0 auto auto
             border-radius:10px 10px 0 0 ;
         }
 
-        /*Quando a label est√° selecionada*/
+        /*Quando a label est· selecionada*/
         input.tabs:checked + label {
             color: #000;
             background: #eee;
         }
  
 
- /*ABA DE CADASTRO - USU√ÅRIO*/
+ /*ABA DE CADASTRO - USU¡RIO */
 		#sForm{
 
 			margin:100px 0;
 
 		}
 
-		#sForm .row{
 
-			
-            
-
-		}
-
-		#sForm #colCabecalho, #colFormCadastro,#colFormPesquisa{
+		#sForm #colCabecalho, #colFormCadastro,#colFormPesquisa, #colFormCadastroTipoImovel{
 
 			margin:0 auto;float:none;
 
 		}
 
-		/*seila ja vejo*/
+		
 		.formPesquisaUsuario{
 			width: 300px;
 			height: 34px;
@@ -118,11 +112,11 @@ margin:90px 0 auto auto
 			transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 		}
 
-/*Rodap√©*/
+/*RodapÈ*/
 
 #rodape{
 
-position:absolute;
+    position:absolute;
     width:100%;
     bottom:0;
     

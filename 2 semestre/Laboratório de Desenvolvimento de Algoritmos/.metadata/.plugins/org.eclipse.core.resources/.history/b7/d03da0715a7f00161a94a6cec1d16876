@@ -1,0 +1,31 @@
+//Importando Scanner
+import java.util.Scanner;
+
+public class Ex9{
+	
+	public static void main(String[] args){
+		
+	//Instanciando Scanner
+	Scanner ent = new Scanner(System.in);
+	
+	//vars
+	double baseMenor, baseMaior, altura, area;
+	
+	System.out.println("Área de um trapézio\n\n");
+	
+	//Entrada	
+	System.out.print("Insira o tamanho da base menor: ");
+	baseMenor = ent.nextDouble();
+	
+	System.out.print("Insira o tamanho da base maior: ");
+	baseMaior = ent.nextDouble();
+	
+	//Processamento
+	area = Math.pow(lado, 2);
+	
+	//Saída
+	System.out.printf("Área = %.2f", area);
+	
+	
+	}
+}

@@ -1,0 +1,20 @@
+//Importando Scanner
+import java.util.Scanner;
+
+public class Ex13{
+	
+	public static void main(String[] args){
+		
+	//Instanciando Scanner
+	Scanner input = new Scanner(System.in);
+	
+	//vars
+	float anoNasc, anoAtual, anos, meses, dias, semanas;
+	
+	System.out.println("\n\n");
+	
+	//Entrada	
+	
+		
+	}
+}

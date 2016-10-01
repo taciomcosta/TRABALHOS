@@ -1,0 +1,20 @@
+//Importando Scanner
+import java.util.Scanner;
+
+public class Ex10{
+	
+	public static void main(String[] args){
+		
+	//Instanciando Scanner
+	Scanner input = new Scanner(System.in);
+	
+	//vars	
+	double diagonalMaior, diagonalMenor, area;
+	
+	System.out.println("Área de um losango\n\n");
+	
+	//Entrada	
+	System.out.println("Insira o tamanho da menor diagonal do losango");
+		
+	}
+}

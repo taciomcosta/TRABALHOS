@@ -1,0 +1,26 @@
+//Importando Scanner
+import java.util.Scanner;
+
+public class Ex13{
+	
+	public static void main(String[] args){
+		
+	//Instanciando Scanner
+	Scanner ent = new Scanner(System.in);
+	
+	//vars
+	int n1;
+	
+	System.out.println("Tabuada de um número\t\t");
+	
+	//Entrada
+	System.out.print("Insira um número inteiro: ");
+	n1 = ent.nextInt();
+	
+	//Processamento e saída
+	System.out.println( "0 * " + n1 + " = " +  n1*1);
+	System.out.println( "1 * " + n1 + " = " +  n1*1);
+	
+		
+	}
+}

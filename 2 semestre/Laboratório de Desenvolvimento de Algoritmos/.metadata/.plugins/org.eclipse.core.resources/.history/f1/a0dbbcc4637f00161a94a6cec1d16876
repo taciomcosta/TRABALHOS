@@ -1,0 +1,28 @@
+//Importando Scanner
+import java.util.Scanner;
+
+
+public class Ex24 {
+	
+	public static void main(String[] args){
+		
+	//Instanciando Scanner
+	Scanner ent = new Scanner(System.in);
+	
+	//vars
+	float dinheiro, marco, dolar, libra;
+	
+	
+	System.out.println("Conversão de dinheiro\n\n");
+	
+	//Entrada	
+	System.out.print("Insira a quantidade de dinheiro em reais: ");
+	
+	//Processamento
+	dolar = dinheiro * 1.8;
+	marco = dinheiro * 2;
+	libra = dinheiro * 1.57;
+		
+	}
+
+}

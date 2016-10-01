@@ -98,7 +98,7 @@
                             echo
                             '<div class="col-md-9 resultado">
                             <img src="imgs/imoveis/residenciais/casa/casa1.jpg" class="img-responsive img-thumbnail">
-                                <h3 class="text-justify text-primary">A title</h3>
+                                <h3 class="text-justify text-primary">A titleA titleA titleA titleA titleA titleA titleA titleA titleA titleA titlesss</h3>
                                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                                 ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
                                 dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
