@@ -1,0 +1,38 @@
+CREATE TABLE usuarios (
+	login VARCHAR(25) 				,
+	senha VARCHAR(15)				,
+	perfil CHAR(1)					,
+	ativo BOOL DEFAULT 1			,
+	ultAcesso DATE					,
+	PRIMARY KEY(login)
+);
+
+INSERT INTO usuarios (login, senha , perfil, ultAcesso)
+              VALUES ('ANA', '123' , 'O'   , '2015-01-31');
+			  
+INSERT INTO usuarios (login  ,senha , perfil, ultAcesso)
+              VALUES ('MAJER','456' , 'S'   , '2016-11-10');
+
+INSERT INTO usuarios (login  ,senha , perfil, ultAcesso)
+              VALUES ('MANE','111' , 'C'   , '2016-11-16');			  
+			  
+			  
+			  mysql> select * FROM usuarios;
++-------+-------+--------+-------+------------+
+| login | senha | perfil | ativo | ultAcesso  |
++-------+-------+--------+-------+------------+
+| ANA   | 123   | O      |     1 | 2015-01-31 |
+| MAJER | 456   | S      |     1 | 2016-11-10 |
+| MANE  | 111   | C      |     1 | 2016-11-16 |
++-------+-------+--------+-------+------------+
+
+mysql> DESCRIBE usuarios;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| login     | varchar(25) | NO   | PRI |         |       |
+| senha     | varchar(15) | YES  |     | NULL    |       |
+| perfil    | char(1)     | YES  |     | NULL    |       |
+| ativo     | tinyint(1)  | YES  |     | 1       |       |
+| ultAcesso | date        | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+

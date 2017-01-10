@@ -1,0 +1,9 @@
+- Editores de texto: Sublime Text, Spacemacs, Brackets
+
+- Frameworks: Bootstrap, Pingendo(Usa Bootstrap)
+
+- Vetorização de imagens: Vector Magic
+
+- Criação de Wireframes: Pencil
+
+- Servidor Web: WampServer, Xamp

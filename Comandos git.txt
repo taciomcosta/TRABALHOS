@@ -6,7 +6,7 @@ git commit -m "Mensagem"
 
 git status 
 
-Ver histórico de alterações: git log 
+Ver commits: git log 
 
 Ver o que foi alterado:git diff               
 
@@ -14,11 +14,13 @@ Limpar a tela: clear
 
 Interface Gráfica:gitk                     
 
-Editar um commit: git commit --amend -m "Mensagem aqui"         
+Editar último  commit: git commit --amend -m "Mensagem aqui"         
 
 Tirar arquivo da Stage area: git reset HEAD <Arquivo>     
 
-Descartar mudanças no arquivo antes de incluí-lo na SA :git checkout --<Arquivo>   
+Descartar mudanças no arquivo antes de incluí-lo na SA :git checkout --<Arquivo>
+
+Voltar para uma versão antiga do arquivo: git checkout <primeiros digitios da chave do commit> --arquivo.extenso
 
 Remover arquivo do repositório: git rm <Arquivo>   
 
@@ -47,4 +49,4 @@ Mesclar branch de teste ao master: git merge teste
 
 Deletar branch: git branch -d teste
 
-Mandar arquivos e atualizações para o GitHub : git push -u origin master
+Mandar arquivos e atualizações para o GitHub : git push -u <origin ou gitRepo do thenewboston> master
