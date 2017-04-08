@@ -1,70 +1,87 @@
 #include <stdio.h>
 
-#define WIDTH 5
-#define HEIGHT 5
-
-int verifyConection(int (*x)[5], int k, int l, int cont)
-{
-    if (x[k][l] == 1) {
-        x[k][l] = 0;
-
-        /* dir */
-        if (l+1 < WIDTH)
-            cont = verifyConection(x, k, l+1, cont);
-        /* esq */
-        if (l-1 > 0)
-            cont = verifyConection(x, k, l-1, cont);
-        /* cima */
-        if (k-1 > 0)
-            cont = verifyConection(x, k-1, l, cont);
-        /* baixo */
-        if (k+1 < HEIGHT)
-            cont = verifyConection(x, k+1, l, cont);
-        /* dir-cima */
-        if (k-1 > 0 && l+1 < WIDTH)
-            cont = verifyConection(x, k-1, l+1, cont);
-        /* dir-baixo*/
-        if (k+1 < HEIGHT && l+1 < WIDTH)
-            cont = verifyConection(x, k+1, l+1, cont);
-        /* esq-cima */
-        if (k-1 < HEIGHT && l-1 < WIDTH)
-            cont = verifyConection(x, k-1, l-1, cont);
-        /* esq-baixo*/
-        if (k+1 < HEIGHT && l-1 < WIDTH)
-            cont = verifyConection(x, k+1, l-1, cont);
-
-        return cont++;
-
-    } else {
-
-        return cont;
-
-    }
-}
+int verifyConnection(int h, int w, int x[h][w], int k, int l);
+void readPrint(int h, int w, int m[h][w]);
 
 int main()
 {
-    /* vars */
-    int m[WIDTH][HEIGHT] = {{1, 0, 0, 0, 1},
-                            {1, 0, 0, 0, 1},
-                            {1, 0, 0, 0, 1},
-                            {1, 0, 0, 0, 0},
-                            {1, 0, 0, 0, 0}},
-        i, j, area,
-        areaMaior = 0;
+        /* vars */
+        int T, HEIGHT, WIDTH, w, j, i;
+        int m[50][50], area, areaMaior;
 
-    for (i = 0; i < HEIGHT; i++) {
-        for (j = 0; j < WIDTH; j++) {
-            area = verifyConection(m, i, j, 0);
-            if (area > areaMaior) {
-                areaMaior = area;
-            }
-            printf("%d ", m[i][j]);
+                scanf("%i", &T);
+                int res[T];
+
+                for (w = 0; w < T; w++) {
+                        scanf("%i %i", &HEIGHT, &WIDTH);
+                        readPrint(HEIGHT, WIDTH, m);
+                        areaMaior = 0;
+
+                        /* checking region for each element */
+                        for (i = 0; i < HEIGHT; i++) {
+                                for (j = 0; j < WIDTH; j++) {
+                                        area = verifyConnection(HEIGHT, WIDTH, m, i, j);
+                                        if (area > areaMaior)
+                                                areaMaior = area;
+                                }
+                        }
+
+                        res[w] = areaMaior;
+                }
+
+                for (w = 0; w < T; w++) {
+                        printf("%i\n", res[w]);
+                }
+
+                return 0;
+}
+
+void readPrint(int h, int w, int m[h][w])
+{
+        int y, z;
+
+        /* read an entire matrix in a unique line*/
+        for (y = 0; y < h; y++) {
+                for (z = 0; z < w; z++) {
+                        scanf("%i", &m[y][z]);
+                }
         }
-        printf("\n");
-    }
 
-    printf("Largest region: %d\n", areaMaior);
+        /* print */
+        /* for (y = 0; y < h; y++) { */
+        /*         for (z = 0; z < w; z++) { */
+        /*                 printf("%i ", m[y][z]); */
+        /*         } */
+        /*         printf("\n"); */
+        /* } */
+}
 
-    return 0;
+int verifyConnection(int h, int w, int x[h][w], int k, int l)
+{
+        int cont = 0;
+
+        /* verifies if it's a valid element */
+        if (k >=0 && k < h && l >= 0 && l < w)
+                if (x[k][l] == 1) {
+                        x[k][l] = 0;
+                        cont++;
+                        /* direita */
+                        cont += verifyConnection(h, w, x, k, l+1);
+                        /* esquerda */
+                        cont += verifyConnection(h, w, x, k, l-1);
+                        /* cima */
+                        cont += verifyConnection(h, w, x, k-1, l);
+                        /* baixo */
+                        cont += verifyConnection(h, w, x, k+1, l);
+                        /* direita-cima */
+                        cont += verifyConnection(h, w, x, k-1, l+1);
+                        /* direita-baixo*/
+                        cont += verifyConnection(h, w, x, k+1, l+1);
+                        /* esquerda-cima */
+                        cont += verifyConnection(h, w, x, k-1, l-1);
+                        /* esquerda-baixo*/
+                        cont += verifyConnection(h, w, x, k+1, l-1);
+                }
+
+        return cont;
 }
