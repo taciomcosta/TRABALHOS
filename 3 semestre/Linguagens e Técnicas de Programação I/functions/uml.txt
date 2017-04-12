@@ -1,0 +1,13 @@
+     +--------------------------+
+     |    Person                |
+     +--------------------------|
+     |   + String name          |
+     |   + int age              |
+     +--------------------------+
+     |                          |
+     |   +isAlive():boolean     |
+     |   +setName(name):void    |
+     |   +getName():String      |
+     |   +setAge(age):void      |
+     |   +getAge():int          |
+     +--------------------------+

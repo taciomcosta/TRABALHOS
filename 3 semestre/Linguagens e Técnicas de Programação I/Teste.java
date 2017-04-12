@@ -14,7 +14,5 @@ public class Teste {
         System.out.println("Is alive: " + tacio.getAlive());
         System.out.println("Your course: " + tacio.getCurso());
         System.out.println("Your age: " + tacio.getAge());
-
-
     }
 }
