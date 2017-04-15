@@ -57,7 +57,7 @@ main()
         /* vars */
         float A[T][T];
 
-        printf("MENOR ELEMENTO DA DIAGONAL SECUNDARIA\n\n");
+        printf("DIVIDINDO VETOR PELO MAIOR ELEMENTO DA DIAGONAL PRINCIPAL\n\n");
 
         /* Entrada */
         lerMatriz(A, T);
@@ -66,5 +66,4 @@ main()
         printf("\nM:\n");
         imprimirMatriz(A, T);
         dividirPeloMaiorDaPrincipal(A, T);
-
 }
