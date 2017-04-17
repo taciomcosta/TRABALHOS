@@ -33,8 +33,8 @@ main()
 void calcularDuracao(int hI, int mI, int hF, int mF)
 {
     /* se a duração máxima exceder 24hrs*/
-    if (hI-hF == 24 || hF-hF == 24) {
-        printf("TEMPO MÁXIMO: 24HRS");
+    if (hI-hF > 24 || hF-hI > 24) {
+        printf("TEMPO MAXIMO: 24HRS");
     } else {
         /* se começar e terminar no mesmo dia */
         if (hI <= hF) {
