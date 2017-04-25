@@ -18,8 +18,6 @@ void imprimirVetor(int u[], int tam)
 {
         int j;
 
-        printf("\nV:\n");
-
         for (j = 0; j < tam; j++) {
                 printf("%i ", u[j]);
         }
@@ -28,52 +26,45 @@ void imprimirVetor(int u[], int tam)
 
 void unir(int a[], int b[])
 {
-        int j, k, uniao[T*2], interseccao[T],
-                contUniao = 0,
-                contInterseccao = 0;
+        int j, k, min, max;
+        int uniao[T*2], soma[T*2];
+        int contUniao = 0;
 
-        /* gera a intersecção de acordo com os elementos de B */
+        /* vetor SOMA */
         for (j = 0; j < T; j++) {
-                for (k = 0 ; k < T; k++) {
-                        if (b[j] == a[k]) {
-                                interseccao[contInterseccao] = b[j];
-                                contInterseccao++;
+                soma[j] = a[j];
+                soma[T+j] = b[j];
+        }
+
+        /* encontrando o menor e maior elemento de SOMA */
+        min = soma[0];
+        max = soma[0];
+        for (j = 0; j < T*2; j++) {
+                if (soma[j] < min) {
+                        min = soma[j];
+                }
+
+                if (soma[j] > min) {
+                        max = soma[j];
+                }
+        }
+
+        /* determinadno o vetor uniao */
+        for (j = min; j <= max; j++) {
+                for (k = 0; k < T*2; k++) {
+                        if (soma[k] == j) {
+                                uniao[contUniao] = soma[k];
+                                k = T*2;
+                                contUniao++;
                         }
                 }
         }
 
-        /* passa o vetor A para união */
-        for (j = 0; j < T; j++) {
-                uniao[contUniao] = a[j];
-                contUniao++;
-        }
-
-        /* passa o vetor B menos o vetor intersecção */
-        k = 0;
-        j = 0;
-
-        while (j < contInterseccao) {
-                while (b[k] != interseccao[j]) {
-                        uniao[contUniao] = b[k];
-                        contUniao++;
-                        k++;
-                }
-
-                k++;
-                j++;
-        }
-
-        while (k < T) {
-                uniao[contUniao] = b[k];
-                contUniao++;
-                k++;
-        }
-
+        printf("\nV || U\n");
         imprimirVetor(uniao, contUniao);
 }
 
-main()
-{
+main(){
         /* vars */
         int v[T], w[T], i;
 
@@ -84,7 +75,9 @@ main()
         lerVetor(w);
 
         /* Processamento e Saída */
+        printf("\nV\n");
         imprimirVetor(v, T);
+        printf("\nU\n");
         imprimirVetor(w, T);
         unir(v, w);
 }
