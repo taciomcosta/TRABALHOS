@@ -52,3 +52,4 @@ void calcularDuracao(int hI, int mI, int hF, int mF)
         }
     }
 }
+
